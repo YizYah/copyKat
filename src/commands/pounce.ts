@@ -8,6 +8,8 @@
 import {Command, flags} from '@oclif/command'
 
 /* ns__custom_start customImports */
+import {createNewTemplate} from '../custom/templates/new/createNewTemplate'
+import {printInstructionsForNewTemplate} from '../custom/templates/new/printInstructionsForNewTemplate'
 /* ns__custom_end customImports */
 /* ns__end_section imports */
 
@@ -18,7 +20,7 @@ static description = `specify a model code base and generate a template to build
 static examples = [
 /* ns__custom_start examples */
 // replace this when you change your command!! To regenerate fresh, first delete everything between the squre brackets.
-  `$ copykat pounce sampleModel -t sampleTemplateDir 
+  `$ copykat pounce sampleModel -t sampleTemplateDir
 You have executed the pounce command...
 `,
 /* ns__custom_end examples */
@@ -47,19 +49,14 @@ async run() {
 
   const {templateDir} = flags
   /* ns__custom_start run */
-  // Put your custom code here...
-  Object.keys(args).map((argName: string) => {
-    if (args[argName] === 'sampleBadArgValue')
-      throw new Error(`bad arg value '${args[argName]}' for arg '${argName}'`)
-    return argName
-  })
-  this.log(`You have executed the pounce command.
-  Here are the args you used: 
-    model: ${model}
-  Here are the flags you used: 
-    templateDir: ${templateDir}
+  try {
+    const finalTemplateDir = await createNewTemplate(model, templateDir)
+    this.log(printInstructionsForNewTemplate(finalTemplateDir))
+  } catch (error) {
+    this.log(error)
+    throw new Error(`Problem creating template: ${error}`)
+  }
 
-Learn how to modify the generated code here: https://ns-flip.nostack.net/Safe-Custom-Code.`)
   /* ns__custom_end run */
 }
 }

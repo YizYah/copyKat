@@ -52,6 +52,23 @@ your users can apply them.  For example, see [easy-oclif-cli](https://www.npmjs.
 
 [//]: # ( ns__custom_start usage )
 # Usage
+## (1) Create a Template
+To create the template, define:
+1. **MODEL_DIR** a directory for the code that will be the basis for your generator
+2. **TEMPLATE_DIR** the directory for your template
+
+Then, run
+```
+copycat pounce $MODEL_DIR -t $TEMPLATE_DIR
+```
+and follow the directions.
+
+(2) Hone the results
+```
+copycat chase $TEMPLATE_DIR
+```
+You will be directed to where to get instructions.
+
 <!-- usage -->
 ```sh-session
 $ npm install -g copykat

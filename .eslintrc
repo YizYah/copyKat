@@ -6,7 +6,9 @@
   ],
   "rules": {
     /* ns__custom_start lintRules */
-/* ns__custom_end lintRules */
+    "no-await-in-loop": "off",
+    "array-callback-return": "off",
+    /* ns__custom_end lintRules */
     "unicorn/filename-case": "off"
   }
 }
