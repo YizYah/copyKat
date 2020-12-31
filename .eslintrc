@@ -1,0 +1,12 @@
+/* ns__file unit: standard, comp: .eslintrc */
+{
+  "extends": [
+    "oclif",
+    "oclif-typescript"
+  ],
+  "rules": {
+    /* ns__custom_start lintRules */
+/* ns__custom_end lintRules */
+    "unicorn/filename-case": "off"
+  }
+}

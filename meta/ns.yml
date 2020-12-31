@@ -1,0 +1,47 @@
+userClass: user
+codeName: MyApp
+template:
+  dir: /home/yisroel/ns/templates/ns-template-easy-oclif-cli
+  name: easy-oclif-cli
+  version: 1
+static:
+  command:
+    pounce:
+      slug: pounce
+      specs:
+        description: specify a model code base and generate a template to build it
+        args:
+          - name: model
+            description: >-
+              path to a model code base from which you will generate your
+              template
+            required: true
+            hidden: false
+        flags:
+          - name: templateDir
+            type: string
+            char: t
+            description: path to the generator that you will build
+            required: false
+            hidden: false
+            multiple: false
+    chase:
+      slug: chase
+      specs:
+        description: >-
+          compare generated code to your model, changing both until you've
+          replicated the model with your template
+        args:
+          - name: templateDir
+            description: the path to your template
+            required: true
+            hidden: false
+starter: /home/yisroel/packages/copykat.starter
+general:
+  packageName: copykat
+  binName: copykat
+  author: YizYah
+  owner: YizYah
+  repositoryName: copykat
+  license: MIT
+  description: pounce on a great code base and build a generator based on it
