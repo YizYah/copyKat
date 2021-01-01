@@ -20,9 +20,7 @@ static description = `compare generated code to your model, changing both until 
 
 static examples = [
 /* ns__custom_start examples */
-// replace this when you change your command!! To regenerate fresh, first delete everything between the squre brackets.
   `$ copykat chase sampleTemplateDir
-You have executed the chase command...
 `,
 /* ns__custom_end examples */
 ]

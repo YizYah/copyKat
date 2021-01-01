@@ -35,6 +35,7 @@
     "lister": "^1.0.3",
     "listr": "^0.14.3",
     "minimatch": "^3.0.4",
+    "node-emoji": "^1.10.0",
     "pluralize": "^8.0.0",
     "prepend-file": "^2.0.0",
     "prompts": "^2.4.0",

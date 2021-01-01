@@ -5,7 +5,12 @@ import {handleNewFiles} from '../new/files/handleNewFiles'
 import {compareSync, Result} from 'dir-compare'
 import {getIgnoredList} from '../../shared/configs/getIgnoredList'
 import {handleUniqueModelFiles} from './handleUniqueModelFiles'
-import {attention, generalOption} from '../../shared/constants/chalkColors'
+import {generalOption} from '../../shared/constants/chalkColors'
+import {displayModifiedFiles} from './displayModifiedFiles'
+import {GenerationRequired} from './GenerationRequired'
+import {displayInstructionsForNextStep} from './displayInstructionsForNextStep'
+
+const emoji = require('node-emoji')
 
 async function getDiscrepantFiles(
   config: Configuration, codeDir: string, modelDir: string
@@ -27,34 +32,6 @@ async function getDiscrepantFiles(
   return res
 }
 
-function displayModifiedFiles(res: Result) {
-  if (!res || !res.diffSet) return
-  const modifiedFileInfo = res.diffSet.filter((file: any) => (file.state === 'distinct'))
-  const modifiedFiles = modifiedFileInfo.map((file: any) => {
-    return file.relativePath.substring(1) + '/' + file.name1
-  })
-
-  if (modifiedFiles.length === 0) {
-    // eslint-disable-next-line no-console
-    console.log('The files shared by the model code base ' +
-      'and the generated sample are identical. ' +
-      'You may still need to modify them in the template files ' +
-      'to remove anything "hard coded" for the model. ' +
-      ` Check out ${generalOption(links.MAKING_FILES_CUSTOMIZABLE)}` +
-      ' for how to do that.')
-    return
-  }
-
-  // eslint-disable-next-line no-console
-  console.log(attention('The following files differ between the model and the generated samples:'))
-  // eslint-disable-next-line no-console
-  modifiedFiles.map(fileName => console.log(`\t${fileName}`))
-
-  // eslint-disable-next-line no-console
-  console.log(`See ${generalOption(links.ADDING_CUSTOM_FILES)}` +
-    ' for how to remove these discrepancies.')
-}
-
 export async function removeCodeModelDiscrepancies(
   templateDir: string, code: string, model: string
 ) {
@@ -66,17 +43,27 @@ export async function removeCodeModelDiscrepancies(
     config, finalCode, finalModel
   )
 
-  await handleNewFiles(
+  if (!res.diffSet) {
+    // eslint-disable-next-line no-console
+    console.log('AWESOME! Your template is generating your model code base exactly! ' + emoji.get('smiley_cat'))
+    // eslint-disable-next-line no-console
+    console.log('\nBut, that does not mean that your template is fully functional yet.' +
+      ' You have to replace things that were hard-coded to be what is in your code base' +
+      ' with custom generated stuff. Not to worry... check out ' +
+    generalOption(links.MAKING_FILES_CUSTOMIZABLE) +
+    ' for how to replace your sample with what your really need.')
+    return
+  }
+
+  let generationRequired: GenerationRequired = await handleNewFiles(
     res, templateDir, finalCode, finalModel
   )
+  const newGenerationRequired = await handleUniqueModelFiles(
+    res, templateDir, finalModel, config
+  )
+  if (newGenerationRequired > generationRequired) generationRequired = newGenerationRequired
 
-  if (res.diffSet) {
-    await handleUniqueModelFiles(
-      res, templateDir, finalModel, config
-    )
-  }
+  displayModifiedFiles(res)  // TODO: replace with handleModifiedFiles
 
-  if (res.diffSet) {
-    displayModifiedFiles(res)
-  }
+  displayInstructionsForNextStep(templateDir, generationRequired)
 }

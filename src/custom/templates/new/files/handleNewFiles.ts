@@ -3,12 +3,13 @@ import {Result} from 'dir-compare'
 import {getConfig} from '../../../shared/configs/getConfig'
 import {setConfig} from '../../../shared/configs/setConfig'
 import {progress} from '../../../shared/constants/chalkColors'
+import {GenerationRequired} from '../../discrepancies/GenerationRequired'
 
 const inquirer = require('inquirer')
 const fs = require('fs-extra')
 const newFileOptions = {
-  REMOVE: 'Update setupSequence to remove it',
   COPY: 'copy it over to the sample',
+  REMOVE: 'Update setupSequence to remove it',
   NOTHING: 'Nothing.  I am not sure.',
 }
 
@@ -39,6 +40,8 @@ export async function handleNewFiles(
   code: string,
   model: string
 ) {
+  let generationRequired = GenerationRequired.None
+
   if (res.diffSet) {
     const newFileInfo = res.diffSet.filter((file: any) => (file.type2 === 'missing'))
     const newFiles = newFileInfo.map((file: any) => {
@@ -58,6 +61,9 @@ export async function handleNewFiles(
         newFilesForPrompt.push(relativeFilePath)
       }
     })
+
+    if (newFilesForPrompt.length === 0) return generationRequired
+
     let i
     for (i = 0; i < newFilesForPrompt.length; i++) {
       const newFileName = newFilesForPrompt[i]
@@ -74,6 +80,7 @@ export async function handleNewFiles(
           arguments: [`$codeDir/${newFileName}`],
         })
         await setConfig(templateDir, config)
+        generationRequired = GenerationRequired.Setup
       }
       if (newFileTreatment === newFileOptions.COPY) {
         await copyFileToSample(
@@ -81,7 +88,10 @@ export async function handleNewFiles(
         )
         // eslint-disable-next-line no-console
         console.log(progress(`copied ${newFileName} to model from code...`))
+        if (generationRequired === GenerationRequired.None)
+          generationRequired = GenerationRequired.Code
       }
     }
   }
+  return generationRequired
 }

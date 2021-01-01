@@ -5,6 +5,7 @@ import {attention, progress} from '../../shared/constants/chalkColors'
 import {Configuration} from '../../shared/constants/types/configuration'
 import {commentDelimiters} from '../commentDelimiters'
 import {fileMatchesCustomFileFilter} from '../../shared/fileMatchesCustomFileFilter'
+import {GenerationRequired} from './GenerationRequired'
 
 const fs = require('fs-extra')
 const inquirer = require('inquirer')
@@ -145,9 +146,10 @@ export async function handleUniqueModelFiles(
   res: Result,
   templateDir: string,
   modelDir: string,
-  config: Configuration
+  config: Configuration,
 ) {
-  if (!res || !res.diffSet) return
+  let generationRequired: GenerationRequired = GenerationRequired.Code
+  if (!res || !res.diffSet) return generationRequired
 
   const nonGeneratedFileInfo = res.diffSet.filter((file: any) => (file.type1 === 'missing'))
   const nonGeneratedFiles = nonGeneratedFileInfo.map((file: any) => {
@@ -155,9 +157,7 @@ export async function handleUniqueModelFiles(
   })
 
   if (nonGeneratedFiles.length === 0) {
-    // eslint-disable-next-line no-console
-    console.log(chalk.red('All files in the model code are being generated properly.'))
-    return
+    return generationRequired
   }
 
   // eslint-disable-next-line no-console
@@ -176,6 +176,7 @@ export async function handleUniqueModelFiles(
       await handleAddingFile(
         finalFileName, templateDir, modelDir, config
       )
+      generationRequired = GenerationRequired.Template
     }
     if (newFileTreatment === oldFileOptions.IGNORE) {
       await handleIgnoringFile(
@@ -183,10 +184,12 @@ export async function handleUniqueModelFiles(
         templateDir,
         config
       )
+      generationRequired = GenerationRequired.Template
     }
     if (newFileTreatment === oldFileOptions.MOVE) {
       // eslint-disable-next-line no-console
       console.log(progress(`moved ${newFileName} to custom inside of model...`))
     }
   }
+  return generationRequired
 }

@@ -38,7 +38,6 @@ export interface BoilerPlateInfoType {
 }
 
 export const boilerplateDir = `${__dirname}/../../resources/boilerplates`
-// console.log(`boilerplateDir =${boilerplateDir}`)
 
 export const typePrefixes = {
   CREATE: 'create',
