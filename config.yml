@@ -27,3 +27,5 @@ setupSequence:
   devInstallation:
     - ava@2.4.0
     - xo@0.36.1
+ignore:
+  - .github/funding.yml

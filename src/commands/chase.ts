@@ -8,6 +8,9 @@
 import {Command, flags} from '@oclif/command'
 
 /* ns__custom_start customImports */
+import {resolveDir} from '../custom/shared/resolveDir'
+import {removeCodeModelDiscrepancies} from '../custom/templates/discrepancies/removeCodeModelDiscrepancies'
+import {suffixes} from '../custom/shared/constants'
 /* ns__custom_end customImports */
 /* ns__end_section imports */
 
@@ -18,7 +21,7 @@ static description = `compare generated code to your model, changing both until 
 static examples = [
 /* ns__custom_start examples */
 // replace this when you change your command!! To regenerate fresh, first delete everything between the squre brackets.
-  `$ copykat chase sampleTemplateDir 
+  `$ copykat chase sampleTemplateDir
 You have executed the chase command...
 `,
 /* ns__custom_end examples */
@@ -41,16 +44,19 @@ async run() {
 
   const {templateDir} = args
   /* ns__custom_start run */
-  // Put your custom code here...
-  Object.keys(args).map((argName: string) => {
-    if (args[argName] === 'sampleBadArgValue')
-      throw new Error(`bad arg value '${args[argName]}' for arg '${argName}'`)
-    return argName
-  })
-  this.log(`You have executed the chase command.
-  Here are the args you used: 
-    templateDir: ${templateDir}
-Learn how to modify the generated code here: https://ns-flip.nostack.net/Safe-Custom-Code.`)
+  const finalTemplateDir = resolveDir(templateDir)
+  const code = finalTemplateDir + suffixes.SAMPLE_DIR
+  const model = finalTemplateDir + suffixes.MODEL_DIR
+
+  try {
+    await removeCodeModelDiscrepancies(
+      templateDir, code, model
+    )
+  } catch (error) {
+    this.log(error)
+    this.error(`cannot compare directories: ${error}`)
+  }
+
   /* ns__custom_end run */
 }
 }

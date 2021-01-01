@@ -13,6 +13,6 @@ MODEL=${templateDir}${suffixes.MODEL_DIR}
 CODE=${templateDir}${suffixes.SAMPLE_DIR}
 
 ` +
-    'You can now call ' + generalOption('ns filediffs $TEMPLATE') +
+    'You can now call ' + generalOption('copykat chase $TEMPLATE') +
     ' to be guided through the next steps for creating a complete template.'
 }
