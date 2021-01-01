@@ -1,4 +1,4 @@
-import {codeNameFromPath} from '../inputs/codeNameFromPath'
+import {codeNameFromPath} from './codeNameFromPath'
 
 const fs = require('fs-extra')
 export const testCodeDir = async (codeDir: string) => {

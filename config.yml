@@ -1,0 +1,29 @@
+name: null
+version: 1
+category: sdog
+dirs:
+  custom: src/custom
+format:
+  customFileFilter: '*.{js,jsx,ts,tsx,md,yml}'
+  defaultOpenComment: /*
+  defaultCloseComment: '*/'
+  openComment:
+    .md: |-
+
+      [//]: # (
+    .yml: '#'
+  closeComment:
+    .md: )
+    .yml: |+
+
+setupSequence:
+  preCommands:
+    - title: run git
+      file: git
+      arguments:
+        - init
+        - $codeDir
+  mainInstallation: []
+  devInstallation:
+    - ava@2.4.0
+    - xo@0.36.1

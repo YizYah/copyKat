@@ -1,0 +1,7 @@
+userClass: user
+codeName: MyApp
+
+template:
+  dir: /home/yisroel/packages/copykat
+  name: 
+  version: 1
