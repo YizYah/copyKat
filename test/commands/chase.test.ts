@@ -9,25 +9,30 @@ please follow all rules at https://ns-flip.nostack.net//Safe-Custom-Code
 /* ns__start_section imports */
 import {expect, test} from '@oclif/test'
 /* ns__custom_start customImports */
+import {resolveDir} from '../../src/custom/shared/resolveDir'
+
 /* ns__custom_end customImports */
 /* ns__end_section imports */
 
 /* ns__custom_start tests */
 // replace everything in this tests section when you modify your code.
 describe('chase', () => {
-  test
-  .stdout()
-  .command(['chase', 'sampleTemplateDir'])
-  .it('runs chase with all args and flags', ctx => {
-    expect(ctx.stdout).to.contain('You have executed the chase command')
-  })
+  const bogusTemplateDir = 'nonexistentTemplate'
+  const fullBogusTemplateDir = resolveDir(bogusTemplateDir)
 
   test
   .stderr()
-  .command(['chase', 'sampleBadArgValue'])
+  .command(['chase', fullBogusTemplateDir])
   .catch(error => {
-    expect(error.message).to.contain('bad arg value')
+    expect(error.message).to.contain(`template directory ${fullBogusTemplateDir} not found`)
   })
   .it('requires proper args')
+
+  // test
+  // .stdout()
+  // .command(['chase', fullBogusTemplateDir])
+  // .it('runs chase with all args and flags', ctx => {
+  //   expect(ctx.stdout).to.contain('template directory ${fullBogusModelDir} not found')
+  // })
 })
 /* ns__custom_end tests */

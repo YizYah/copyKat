@@ -11,6 +11,7 @@ import {GenerationRequired} from './GenerationRequired'
 import {displayInstructionsForNextStep} from './displayInstructionsForNextStep'
 
 const emoji = require('node-emoji')
+const fs = require('fs-extra')
 
 async function getDiscrepantFiles(
   config: Configuration, codeDir: string, modelDir: string
@@ -35,6 +36,9 @@ async function getDiscrepantFiles(
 export async function removeCodeModelDiscrepancies(
   templateDir: string, code: string, model: string
 ) {
+  if (!await fs.pathExists(templateDir))
+    throw new Error(`template directory ${templateDir} not found.`)
+
   const finalCode = code || templateDir + suffixes.SAMPLE_DIR
   const finalModel = model || templateDir + suffixes.MODEL_DIR
 

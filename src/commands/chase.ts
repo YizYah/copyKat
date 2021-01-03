@@ -48,7 +48,7 @@ async run() {
 
   try {
     await removeCodeModelDiscrepancies(
-      templateDir, code, model
+      finalTemplateDir, code, model
     )
   } catch (error) {
     this.log(error)

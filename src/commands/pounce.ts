@@ -51,7 +51,7 @@ async run() {
   const {templateDir} = flags
   /* ns__custom_start run */
   try {
-    const finalTemplateDir = await createNewTemplate(model, resolveDir(templateDir))
+    const finalTemplateDir = await createNewTemplate(resolveDir(model), resolveDir(templateDir))
     this.log(printInstructionsForNewTemplate(finalTemplateDir))
   } catch (error) {
     this.log(error)
