@@ -1,4 +1,4 @@
-import {promptTypes, promptUser} from '../../inputs/promptUser'
+import {promptTypes, promptUser} from './inputs/promptUser'
 import {testCodeDir} from '../../shared/testCodeDir'
 
 export async function getCodeDir(codeDir: string | undefined) {

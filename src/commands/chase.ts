@@ -11,6 +11,7 @@ import {Command, flags} from '@oclif/command'
 import {resolveDir} from '../custom/shared/resolveDir'
 import {removeCodeModelDiscrepancies} from '../custom/templates/discrepancies/removeCodeModelDiscrepancies'
 import {suffixes} from '../custom/shared/constants'
+import {dingKats} from '../custom/shared/constants/types/dingKats'
 /* ns__custom_end customImports */
 /* ns__end_section imports */
 
@@ -48,11 +49,11 @@ async run() {
 
   try {
     await removeCodeModelDiscrepancies(
-      templateDir, code, model
+      finalTemplateDir, code, model
     )
   } catch (error) {
     this.log(error)
-    this.error(`cannot compare directories: ${error}`)
+    this.error(dingKats.ERROR + ` cannot compare directories: ${error}`)
   }
 
   /* ns__custom_end run */

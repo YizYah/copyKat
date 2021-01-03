@@ -1,5 +1,5 @@
 import * as chalk from 'chalk'
-import {Result} from 'dir-compare'
+import {Difference} from 'dir-compare'
 import {getConfig} from '../../../shared/configs/getConfig'
 import {setConfig} from '../../../shared/configs/setConfig'
 import {progress} from '../../../shared/constants/chalkColors'
@@ -35,15 +35,15 @@ async function copyFileToSample(
 }
 
 export async function handleNewFiles(
-  res: Result,
+  differences: Array<Difference>,
   templateDir: string,
   code: string,
   model: string
 ) {
   let generationRequired = GenerationRequired.None
 
-  if (res.diffSet) {
-    const newFileInfo = res.diffSet.filter((file: any) => (file.type2 === 'missing'))
+  if (differences) {
+    const newFileInfo = differences.filter((file: any) => (file.type2 === 'missing'))
     const newFiles = newFileInfo.map((file: any) => {
       const filePath = file.relativePath.substring(1) + '/' + file.name1
       return filePath.replace(/\/\//g, '/')

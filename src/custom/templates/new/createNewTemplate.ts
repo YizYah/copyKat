@@ -17,6 +17,8 @@ export async function createNewTemplate(model: string, defaultTemplateDir: strin
     model,
     templateDir: defaultTemplateDir || '',
   }
+
+  if (!await fs.pathExists(model)) throw new Error(`model directory ${model} not found.`)
   const responses: TemplateRequirements = await newTemplateQuestions(defaults)
   await generateTemplateFiles(responses)
 

@@ -1,6 +1,6 @@
 {
   "name": "copykat",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "pounce on a great code base and build a generator based on it",
   "main": "lib/index.ts",
   "scripts": {
@@ -10,6 +10,7 @@
     "posttest": "eslint . --ext .ts --config .eslintrc",
     "prepack": "rm -rf lib && tsc -b && oclif-dev manifest && oclif-dev readme",
     "test": "nyc --extension .ts mocha --forbid-only \"test/**/*.test.ts\"",
+    "testSimple": "mocha --forbid-only \"test/**/*.test.ts\"",
     "version": "oclif-dev readme && git add README.md"
   },
   "keywords": [
