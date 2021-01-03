@@ -11,6 +11,7 @@ import {Command, flags} from '@oclif/command'
 import {createNewTemplate} from '../custom/templates/new/createNewTemplate'
 import {printInstructionsForNewTemplate} from '../custom/templates/new/printInstructionsForNewTemplate'
 import {resolveDir} from '../custom/shared/resolveDir'
+import {dingKats} from '../custom/shared/constants/types/dingKats'
 
 /* ns__custom_end customImports */
 /* ns__end_section imports */
@@ -55,7 +56,7 @@ async run() {
     this.log(printInstructionsForNewTemplate(finalTemplateDir))
   } catch (error) {
     this.log(error)
-    throw new Error(`Problem creating template: ${error}`)
+    throw new Error(dingKats.ERROR + ` Problem creating template: ${error}`)
   }
 
   /* ns__custom_end run */

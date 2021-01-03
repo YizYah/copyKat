@@ -1,6 +1,7 @@
 import {Result} from 'dir-compare'
 import {attention, generalOption} from '../../shared/constants/chalkColors'
 import {links} from '../../shared/constants'
+import {dingKats} from '../../shared/constants/types/dingKats'
 
 export function displayModifiedFiles(res: Result) {
   if (!res || !res.diffSet) return
@@ -11,17 +12,16 @@ export function displayModifiedFiles(res: Result) {
 
   if (modifiedFiles.length === 0) {
     // eslint-disable-next-line no-console
-    console.log('The files shared by the model code base ' +
-            'and the generated sample are identical.')
     return
   }
 
   // eslint-disable-next-line no-console
-  console.log(attention('The following files differ between the model and the generated samples:'))
+  console.log(dingKats.CRYING + attention(' The following files differ') +
+    ' between the model and the generated samples:')
   // eslint-disable-next-line no-console
   modifiedFiles.map(fileName => console.log(`\t${fileName}`))
 
   // eslint-disable-next-line no-console
   console.log(`See ${generalOption(links.ADDING_CUSTOM_FILES)}` +
-        ' for how to remove these discrepancies.')
+        ' for how to remove these discrepancies. ' + dingKats.GO_TO)
 }

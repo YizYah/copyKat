@@ -6,6 +6,7 @@ import {Configuration} from '../../shared/constants/types/configuration'
 import {commentDelimiters} from '../commentDelimiters'
 import {fileMatchesCustomFileFilter} from '../../shared/fileMatchesCustomFileFilter'
 import {GenerationRequired} from './GenerationRequired'
+import {dingKats} from '../../shared/constants/types/dingKats'
 
 const fs = require('fs-extra')
 const inquirer = require('inquirer')
@@ -62,7 +63,7 @@ function getOldFileQuestions(fileName: string) {
     {
       type: 'list',
       name: 'newFileTreatment',
-      message: `This file ${chalk.red(fileName)} is showing up only in your model code, not being generated.  What would you like done?`,
+      message: dingKats.POUTING + ` This file ${chalk.red(fileName)} is showing up only in your model code, not being generated.  What would you like done?`,
       choices: Object.values(oldFileOptions),
     },
   ]
@@ -148,7 +149,7 @@ export async function handleUniqueModelFiles(
   modelDir: string,
   config: Configuration,
 ) {
-  let generationRequired: GenerationRequired = GenerationRequired.Code
+  let generationRequired: GenerationRequired = GenerationRequired.None
   if (!res || !res.diffSet) return generationRequired
 
   const nonGeneratedFileInfo = res.diffSet.filter((file: any) => (file.type1 === 'missing'))
@@ -161,7 +162,7 @@ export async function handleUniqueModelFiles(
   }
 
   // eslint-disable-next-line no-console
-  console.log(chalk.red('Files in the model code not being generated:'))
+  console.log(dingKats.POUTING + 'Some files in the model code base are ' + attention(' not being generated:'))
   // eslint-disable-next-line no-console
 
   let i
@@ -188,7 +189,8 @@ export async function handleUniqueModelFiles(
     }
     if (newFileTreatment === oldFileOptions.MOVE) {
       // eslint-disable-next-line no-console
-      console.log(progress(`moved ${newFileName} to custom inside of model...`))
+      console.log(progress(dingKats.SMILING +
+        `moved ${newFileName} to custom inside of model...`))
     }
   }
   return generationRequired

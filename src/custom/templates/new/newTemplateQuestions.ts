@@ -1,3 +1,5 @@
+import {dingKats} from '../../shared/constants/types/dingKats'
+
 const inquirer = require('inquirer')
 const path = require('path')
 
@@ -71,7 +73,7 @@ export async function newTemplateQuestions(defaults: TemplateDefaults) {
   let response: any = {}
 
   // eslint-disable-next-line no-console
-  console.log('Please answer the following questions:')
+  console.log(dingKats.SMILING + ' Please answer the following questions:')
   try {
     await inquirer
     .prompt(questions)
@@ -79,7 +81,7 @@ export async function newTemplateQuestions(defaults: TemplateDefaults) {
       response = answers
     })
   } catch (error) {
-    throw new Error(`problem asking question: ${error}`)
+    throw new Error(dingKats.POUTING + `problem asking question: ${error}`)
   }
 
   if (model) response.original = model
