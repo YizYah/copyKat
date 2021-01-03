@@ -39,9 +39,10 @@ export async function removeCodeModelDiscrepancies(
     // eslint-disable-next-line no-console
     console.log('\n' + dingKats.POUTING + ' But, that does not mean that your template is fully functional yet.' +
       ' You have to replace things that were hard-coded to be what is in your code base' +
-      ' with custom generated stuff. Not to worry... check out ' +
+      ' with custom generated stuff. ' +
+      '\n\n' + dingKats.GO_TO + 'Not to worry... check out ' +
     generalOption(links.MAKING_FILES_CUSTOMIZABLE) +
-    ' for how to replace your sample with what your really need. ' + dingKats.GO_TO)
+    ' for how to replace your sample with what your really need. ')
     return
   }
 

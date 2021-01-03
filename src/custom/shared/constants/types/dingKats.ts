@@ -7,4 +7,5 @@ export const dingKats = {
   POUTING: emoji.get(':pouting_cat:'),
   SMILING: emoji.get(':smile_cat:'),
   ERROR: emoji.get(':scream_cat:'),
+  CONFIDENT: emoji.get(':smirk_cat:'),
 }

@@ -73,7 +73,7 @@ export async function newTemplateQuestions(defaults: TemplateDefaults) {
   let response: any = {}
 
   // eslint-disable-next-line no-console
-  console.log(dingKats.SMILING + ' Please answer the following questions:')
+  console.log(dingKats.SMILING + ' Welcome to copykat! Please answer the following questions:')
   try {
     await inquirer
     .prompt(questions)

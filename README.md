@@ -8,9 +8,7 @@
 [//]: # ( ns__start_section intro )
 
 [//]: # ( ns__custom_start description )
-copykat
-======
-pounce on a great code base and build a generator based on it
+Build a generator based on a model code base
 
 [//]: # ( ns__custom_end description )
 
@@ -23,9 +21,9 @@ pounce on a great code base and build a generator based on it
 
 [//]: # ( ns__start_section usageSection )
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
-[![Version](https://img.shields.io/npm/v/copykat.starter.svg)](https://npmjs.org/package/copykat.starter)
-[![Downloads/week](https://img.shields.io/npm/dw/copykat.starter.svg)](https://npmjs.org/package/copykat.starter)
-[![License](https://img.shields.io/npm/l/copykat.starter.svg)](https://github.com//blob/master/package.json)
+[![Version](https://img.shields.io/npm/v/copykat.svg)](https://npmjs.org/package/copykat)
+[![Downloads/week](https://img.shields.io/npm/dw/copykat.svg)](https://npmjs.org/package/copykat)
+[![License](https://img.shields.io/npm/l/copykat.svg)](https://github.com//blob/master/package.json)
 
 [//]: # ( ns__custom_end badges )
 
@@ -33,12 +31,10 @@ pounce on a great code base and build a generator based on it
 
 
 [//]: # ( ns__custom_start beforeToc )
-You'd be surprised how easy it is to create your own generator. Snif out a good example, 
-then pounce and finally chase it until it's just where you want it to be.
+To create your own generator, make a local copy of a code base that you like and then call `copykat pounce $MODEL` and follow the directions.
 
-The generators use [ns-flip](https://www.npmjs.com/package/ns-flip), a re-generator tool.  
-You can release your generator and then make changes as needed.  Whenever you update it,
-your users can apply them.  For example, see [easy-oclif-cli](https://www.npmjs.com/package/easy-oclif-cli).
+The generators use [ns-flip](https://www.npmjs.com/package/ns-flip), a re-generator tool.  That means that you can release your generator and then make changes as needed.  Whenever you update it,
+your users can apply them without losing their custom changes.  For an example, see [easy-oclif-cli](https://www.npmjs.com/package/easy-oclif-cli).
 
 [//]: # ( ns__custom_end beforeToc )
 
@@ -67,7 +63,7 @@ and follow the directions.
 ```
 copycat chase $TEMPLATE_DIR
 ```
-You will be directed to where to get instructions.
+You will be directed through the process.
 
 <!-- usage -->
 ```sh-session
