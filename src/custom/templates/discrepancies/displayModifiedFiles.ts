@@ -22,9 +22,9 @@ export function displayModifiedFiles(res: Result) {
   modifiedFiles.map(fileName => console.log(`\t${fileName}`))
 
   // eslint-disable-next-line no-console
-  console.log(dingKats.GO_TO + ` See ${generalOption(links.ADDING_CUSTOM_FILES)}` +
+  console.log(` See ${generalOption(links.ADDING_CUSTOM_FILES)}` +
         ' for how to remove these discrepancies.')
-  console.log(dingKats.GO_TO + `Any time you want to see whether your changes took affect, just run
+  console.log(` Any time you want to see whether your changes took affect, just run
         ${generalOption('copykat chase $TEMPLATE')}
   again.
   `)

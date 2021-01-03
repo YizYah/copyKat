@@ -4,11 +4,12 @@ import {getConfig} from '../../../shared/configs/getConfig'
 import {setConfig} from '../../../shared/configs/setConfig'
 import {progress} from '../../../shared/constants/chalkColors'
 import {GenerationRequired} from '../../discrepancies/GenerationRequired'
+import {dingKats} from '../../../shared/constants/types/dingKats'
 
 const inquirer = require('inquirer')
 const fs = require('fs-extra')
 const newFileOptions = {
-  COPY: 'copy it over to the sample',
+  COPY: 'Copy it over to the sample',
   REMOVE: 'Update setupSequence to remove it',
   NOTHING: 'Nothing.  I am not sure.',
 }
@@ -18,8 +19,8 @@ function getNewFileQuestions(fileName: string) {
     {
       type: 'list',
       name: 'newFileTreatment',
-      message: `This file ${chalk.red(fileName)} is showing up only in your generated code, not in your sample.  What would you like done?`,
-      choices: [newFileOptions.REMOVE, newFileOptions.COPY, newFileOptions.NOTHING],
+      message: dingKats.POUTING + ` This file ${chalk.red(fileName)} is showing up only in your generated code, not in your sample.  What would you like done?`,
+      choices: Object.values(newFileOptions),
     },
   ]
 }

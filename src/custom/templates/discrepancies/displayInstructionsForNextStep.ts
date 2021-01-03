@@ -12,12 +12,13 @@ export function displayInstructionsForNextStep(templateDir: string, generationRe
 
   // eslint-disable-next-line no-console
   console.log(`${dingKats.GO_TO} You should now regenerate the sample code using ns-flip.
-  If you have ns-flip installed globally [do so by running 'npm i -g ns-flip'], then you can run
-      ${generalOption('ns' +  command)}
+  If you have ns-flip installed globally [you can do so by running 'npm i -g ns-flip'], then you can run
+      ${generalOption('ns ' +  command)}
   Otherwise, run:
-      ${generalOption('npx ns-flip' +  command)}
+      ${generalOption('npx ns-flip ' +  command)}
 
-  After you have generated again, again run
+  After you have generated, run
       ${generalOption('copykat chase ' + templateDir)}
+  to search for additional problems.
   `)
 }
