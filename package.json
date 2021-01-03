@@ -1,6 +1,6 @@
 {
   "name": "copykat",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "pounce on a great code base and build a generator based on it",
   "main": "lib/index.ts",
   "scripts": {
