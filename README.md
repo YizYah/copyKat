@@ -73,7 +73,7 @@ $ npm install -g copykat
 $ copykat COMMAND
 running command...
 $ copykat (-v|--version|version)
-copykat/0.0.3 linux-x64 node-v14.9.0
+copykat/0.0.4 linux-x64 node-v14.9.0
 $ copykat --help [COMMAND]
 USAGE
   $ copykat COMMAND
@@ -114,7 +114,7 @@ EXAMPLE
   $ copykat chase sampleTemplateDir
 ```
 
-_See code: [src/commands/chase.ts](https://github.com/YizYah/copykat/blob/v0.0.3/src/commands/chase.ts)_
+_See code: [src/commands/chase.ts](https://github.com/YizYah/copykat/blob/v0.0.4/src/commands/chase.ts)_
 
 ## `copykat help [COMMAND]`
 
@@ -152,7 +152,7 @@ EXAMPLE
   $ copykat pounce sampleModel -t sampleTemplateDir
 ```
 
-_See code: [src/commands/pounce.ts](https://github.com/YizYah/copykat/blob/v0.0.3/src/commands/pounce.ts)_
+_See code: [src/commands/pounce.ts](https://github.com/YizYah/copykat/blob/v0.0.4/src/commands/pounce.ts)_
 <!-- commandsstop -->
 
 [//]: # ( ns__custom_end commands )
