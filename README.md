@@ -34,7 +34,9 @@ Build a generator based on a model code base
 To create your own generator, make a local copy of a code base that you like and then call `copykat pounce $MODEL` and follow the directions.
 
 The generators use [ns-flip](https://www.npmjs.com/package/ns-flip), a re-generator tool.  That means that you can release your generator and then make changes as needed.  Whenever you update it,
-your users can apply them without losing their custom changes.  For an example, see [easy-oclif-cli](https://www.npmjs.com/package/easy-oclif-cli).
+your users can apply them without losing their custom changes.  See more complete instructions below in [Usage](#usage).
+
+For an example, see [easy-oclif-cli](https://www.npmjs.com/package/easy-oclif-cli).
 
 [//]: # ( ns__custom_end beforeToc )
 
