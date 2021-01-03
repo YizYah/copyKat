@@ -23,8 +23,9 @@ export function displayModifiedFiles(res: Result) {
 
   // eslint-disable-next-line no-console
   console.log(` See ${generalOption(links.ADDING_CUSTOM_FILES)}` +
-        ' for how to remove these discrepancies.')
-  console.log(` Any time you want to see whether your changes took affect, just run
+        ' for how to remove these discrepancies.' +
+    `
+ To see whether changes took affect, run
         ${generalOption('copykat chase $TEMPLATE')}
   again.
   `)
