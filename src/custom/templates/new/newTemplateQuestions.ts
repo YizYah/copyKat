@@ -1,4 +1,4 @@
-import {dingKats} from '../../shared/constants/types/dingKats'
+const {dingKats} = require('magicalstrings').constants.types.dingKats
 
 const inquirer = require('inquirer')
 const path = require('path')

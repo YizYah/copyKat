@@ -1,13 +1,13 @@
-import {FileCustomCode} from '../../shared/constants/types/custom'
+const {FileCustomCode} = require('magicalstrings').constants.types.custom
 import {
   regExReplacedCodeSectionGenerated,
   regExReplacedCodeSectionTagged,
 } from '../../shared/constants/Regex/regExReplacedCodeSection'
-import {customLocationNewRegExString} from '../../shared/constants/Regex/regExNewCustomLocation'
-import {regExCleanupText} from '../../shared/constants/Regex/regExCleanupText'
-import {customCleanupRegExText} from '../../shared/constants/Regex/regExCustomCleanup'
+const {customLocationNewRegExString} = require('magicalstrings').constants.Regex.regExNewCustomLocation
+const {regExCleanupText} = require('magicalstrings').constants.Regex.regExCleanupText
+const {customCleanupRegExText} = require('magicalstrings').constants.Regex.regExCustomCleanup
 import {commentDelimiters} from '../../templates/commentDelimiters'
-import {Configuration} from '../../shared/constants/types/configuration'
+const {Configuration} = require('magicalstrings').constants.types.configuration
 
 export const fs = require('fs-extra')
 const path = require('path')

@@ -1,10 +1,10 @@
-import {NsInfo} from '../../shared/constants/types/nsInfo'
-import {Schema} from '../../shared/constants/types/schema'
+const {NsInfo} = require('magicalstrings').constants.types.nsInfo
+const {Schema} = require('magicalstrings').constants.types.schema
 import {loadFileTemplate} from '../../templates/loadFileTemplate'
 import {registerHelpers} from '../handlebars/registerHelpers'
 import {registerPartials} from '../handlebars/registerPartials'
-import {Configuration} from '../../shared/constants/types/configuration'
-import {placeholders} from '../../shared/constants'
+const {Configuration} = require('magicalstrings').constants.types.configuration
+const {placeholders} = require('magicalstrings').constants
 import {contextForStatic} from '../handlebars/context/contextForStatic'
 import {replaceCommentDelimiters} from './replaceCommentDelimiters'
 

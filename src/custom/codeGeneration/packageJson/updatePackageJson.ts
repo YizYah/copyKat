@@ -1,4 +1,4 @@
-import {removeNpmDependencyPrefix} from '../../shared/removeNpmDependencyPrefix'
+const {removeNpmDependencyPrefix} = require('magicalstrings').removeNpmDependencyPrefix
 
 const fs = require('fs-extra')
 const semverGt = require('semver/functions/gt')

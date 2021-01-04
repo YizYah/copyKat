@@ -1,4 +1,4 @@
-import {commands, dirNames, docPages, links} from '../../shared/constants'
+const {commands, dirNames, docPages, links} = require('magicalstrings').constants
 
 import {regenerateCode} from '../regenerateCode'
 import {copyTemplateToMeta} from './copyTemplateToMeta'

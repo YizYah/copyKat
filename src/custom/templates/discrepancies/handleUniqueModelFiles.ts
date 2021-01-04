@@ -1,12 +1,12 @@
 import {Result} from 'dir-compare'
 import * as chalk from 'chalk'
-import {setConfig} from '../../shared/configs/setConfig'
-import {attention, progress} from '../../shared/constants/chalkColors'
-import {Configuration} from '../../shared/constants/types/configuration'
+const setConfig = require('magicalstrings').configs.setConfig
+const {attention, progress} = require('magicalstrings').constants.chalkColors
+const {Configuration} = require('magicalstrings').constants.types.configuration
 import {commentDelimiters} from '../commentDelimiters'
-import {fileMatchesCustomFileFilter} from '../../shared/fileMatchesCustomFileFilter'
+const {fileMatchesCustomFileFilter} = require('magicalstrings').fileMatchesCustomFileFilter
 import {GenerationRequired} from './GenerationRequired'
-import {dingKats} from '../../shared/constants/types/dingKats'
+const {dingKats} = require('magicalstrings').constants.types.dingKats
 
 const fs = require('fs-extra')
 const inquirer = require('inquirer')

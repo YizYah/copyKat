@@ -1,4 +1,4 @@
-import {Schema} from '../../shared/constants/types/schema'
+const {Schema} = require('magicalstrings').constants.types.schema
 
 const highestLevel = 'highestLevel'
 import {buildSelectionTree} from './buildSelectionTree'

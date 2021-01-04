@@ -1,5 +1,5 @@
-import {regExFileText} from '../../shared/constants/Regex/regExFileInfo'
-import {Delimiters} from '../../shared/constants'
+const {regExFileText} = require('magicalstrings').constants.Regex.regExFileInfo
+const {Delimiters} = require('magicalstrings').constants
 
 export function getFileInfo(fileText: string, delimiters: Delimiters) {
   let unit = ''

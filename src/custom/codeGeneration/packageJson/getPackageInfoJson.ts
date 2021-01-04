@@ -1,11 +1,11 @@
 import {registerPartials} from '../handlebars/registerPartials'
 import {registerHelpers} from '../handlebars/registerHelpers'
 import {loadFileTemplate} from '../../templates/loadFileTemplate'
-import {fileNames} from '../../shared/constants'
+const {fileNames} = require('magicalstrings').constants
 import {contextForStandard} from '../handlebars/context/contextForStandard'
-import {NsInfo} from '../../shared/constants/types/nsInfo'
-import {Schema} from '../../shared/constants/types/schema'
-import {Configuration} from '../../shared/constants/types/configuration'
+const {NsInfo} = require('magicalstrings').constants.types.nsInfo
+const {Schema} = require('magicalstrings').constants.types.schema
+const {Configuration} = require('magicalstrings').constants.types.configuration
 
 const fs = require('fs-extra')
 

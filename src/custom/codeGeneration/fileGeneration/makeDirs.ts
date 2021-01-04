@@ -1,4 +1,4 @@
-import {dirOptions} from '../../shared/dirOptions'
+const {dirOptions} = require('magicalstrings').dirOptions
 
 const fs = require('fs-extra')
 

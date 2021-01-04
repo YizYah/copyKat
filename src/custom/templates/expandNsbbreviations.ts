@@ -1,5 +1,5 @@
-import {regExTemplateAbbreviation} from '../shared/constants/Regex/regExTemplateAbbreviation'
-import {placeholders} from '../shared/constants'
+const {regExTemplateAbbreviation} = require('magicalstrings').constants.Regex
+const {placeholders} = require('magicalstrings').constants
 
 export function expandNsAbbreviations(template: string) {
   return template

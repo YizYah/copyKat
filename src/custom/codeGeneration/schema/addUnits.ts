@@ -1,8 +1,8 @@
-import {Units} from '../../shared/constants/types/nsInfo'
-import {Schema} from '../../shared/constants/types/schema'
+const {Units} = require('magicalstrings').constants.types.nsInfo
+const {Schema} = require('magicalstrings').constants.types.schema
 
 import {newUnit} from  './newUnit'
-import {Configuration} from '../../shared/constants/types/configuration'
+const {Configuration} = require('magicalstrings').constants.types.configuration
 
 export function addUnits(
   units: Units, schema: Schema, config: Configuration

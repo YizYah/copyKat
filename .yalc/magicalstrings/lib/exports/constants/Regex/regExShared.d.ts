@@ -1,0 +1,14 @@
+import { Delimiters } from '..';
+export declare const commentOpen = "(\\/\\/|\\/\\*)";
+export declare const commentClose = "(\\n|\\*\\/)";
+export declare const content = "((.|\n)*?)";
+export declare const space = "[ \\t]+";
+export declare const possibleSpace = "[ \\t]*";
+export declare function convertDelimitersForRegEx(commentDelimiter: string): string;
+export declare const openingForDelimiters: (delimiters: Delimiters) => string;
+export declare const closingForDelimiters: (delimiters: Delimiters) => string;
+export declare const specString: string;
+export declare const openingMarkerForDelimiters: (tag: string, delimiters: Delimiters) => string;
+export declare const closingMarkerForDelimiters: (tag: string, delimiters: Delimiters) => string;
+export declare const locationSpec = "(\\S*), comp: (\\S*), loc: (\\S*)";
+export declare const locationRepetition = "\\2, comp: \\3, loc: \\4";

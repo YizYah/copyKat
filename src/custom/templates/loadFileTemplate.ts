@@ -1,7 +1,7 @@
 import {expandNsAbbreviations} from './expandNsbbreviations'
-import {placeholders} from '../shared/constants'
-import {fileMatchesCustomFileFilter} from '../shared/fileMatchesCustomFileFilter'
-import {Configuration} from '../shared/constants/types/configuration'
+const {placeholders} = require('magicalstrings').constants
+const {fileMatchesCustomFileFilter} = require('magicalstrings').fileMatchesCustomFileFilter
+const {Configuration} = require('magicalstrings').constants.types
 
 const fs = require('fs-extra')
 const Handlebars = require('handlebars')

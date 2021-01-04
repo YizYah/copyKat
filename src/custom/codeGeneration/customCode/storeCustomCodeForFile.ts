@@ -1,8 +1,8 @@
-import {CustomCodeRepository} from '../../shared/constants/types/custom'
-import {customLocationNewRegExString} from '../../shared/constants/Regex/regExNewCustomLocation'
-import {replacedRexExText} from '../../shared/constants/Regex/regExReplacedCodeSection'
+const {CustomCodeRepository} = require('magicalstrings').constants.types.custom
+const {customLocationNewRegExString} = require('magicalstrings').constants.Regex.regExNewCustomLocation
+const {replacedRexExText} = require('magicalstrings').constants.Regex.regExReplacedCodeSection
 import {getFileInfo} from './getFileInfo'
-import {Configuration} from '../../shared/constants/types/configuration'
+const {Configuration} = require('magicalstrings').constants.types.configuration
 import {commentDelimiters} from '../../templates/commentDelimiters'
 
 const fs = require('fs-extra')

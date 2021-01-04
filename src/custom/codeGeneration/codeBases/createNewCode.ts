@@ -1,5 +1,5 @@
 import {getCodeDir} from './inputs/getCodeDir'
-import {errorMessage} from '../../shared/errorMessage'
+const {errorMessage} = require('magicalstrings').errorMessage
 
 const chalk = require('chalk')
 const fs = require('fs-extra')

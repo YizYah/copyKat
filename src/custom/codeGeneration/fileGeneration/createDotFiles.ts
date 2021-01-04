@@ -1,4 +1,4 @@
-import {boilerplateDir} from '../../shared/constants'
+const {boilerplateDir} = require('magicalstrings').constants
 
 const fs = require('fs-extra')
 const jsonfile = require('jsonfile')

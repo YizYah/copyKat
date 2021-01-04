@@ -1,4 +1,4 @@
-import {dirNames, fileNames, links} from '../../shared/constants'
+const {dirNames, fileNames, links} = require('magicalstrings').constants
 import {loadFileTemplate} from '../loadFileTemplate'
 import {TemplateRequirements} from './TemplateRequirements'
 

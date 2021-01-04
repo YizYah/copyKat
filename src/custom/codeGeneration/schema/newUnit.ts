@@ -1,14 +1,14 @@
-import {unitTypes, unitPrefixes} from '../../shared/constants'
-import {UnitDiscription} from '../../shared/constants/types/nsInfo'
-import {Schema, SpecNameInfo} from '../../shared/constants/types/schema'
+const {unitTypes, unitPrefixes} = require('magicalstrings').constants
+const {UnitDiscription} = require('magicalstrings').constants.types.nsInfo
+const {Schema, SpecNameInfo} = require('magicalstrings').constants.types.schema
 
 const traverse = require('traverse')
 
-import {allCaps} from '../../shared/inflections'
+const {allCaps} = require('magicalstrings').inflections
 import {newType} from './newType'
 // const pluralize = require('pluralize');
-import {parseSpecName} from '../../shared/constants/parseSpecName'
-import {Configuration} from '../../shared/constants/types/configuration'
+const {parseSpecName} = require('magicalstrings').constants.parseSpecName
+const {Configuration} = require('magicalstrings').constants.types.configuration
 // const highestLevel = 'highestLevel';
 
 // const getTypeString = (node: any) => {

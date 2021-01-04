@@ -1,14 +1,14 @@
-import {links, suffixes} from '../../shared/constants'
-import {Configuration} from '../../shared/constants/types/configuration'
-import {getConfig} from '../../shared/configs/getConfig'
+const {links, suffixes} = require('magicalstrings').constants
+const {Configuration} = require('magicalstrings').constants.types.configuration
+const getConfig = require('magicalstrings').configs.getConfig
 import {handleNewFiles} from '../new/files/handleNewFiles'
 import {handleUniqueModelFiles} from './handleUniqueModelFiles'
-import {attention, generalOption} from '../../shared/constants/chalkColors'
+const {attention, generalOption} = require('magicalstrings').constants.chalkColors
 import {displayModifiedFiles} from './displayModifiedFiles'
 import {GenerationRequired} from './GenerationRequired'
 import {displayInstructionsForNextStep} from './displayInstructionsForNextStep'
 import {getDiscrepantFiles} from './getDiscrepantFiles'
-import {dingKats} from '../../shared/constants/types/dingKats'
+const {dingKats} = require('magicalstrings').constants.types.dingKats
 
 const emoji = require('node-emoji')
 const fs = require('fs-extra')
