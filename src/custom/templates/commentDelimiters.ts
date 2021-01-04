@@ -1,5 +1,4 @@
-const {Configuration} = require('magicalstrings').constants.types
-
+import {Configuration} from 'magicalstrings'
 const globalDefaultOpen = '/*'
 const globalDefaultClose = '*/'
 

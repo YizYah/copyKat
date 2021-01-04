@@ -1,10 +1,10 @@
-import {Configuration} from '../../../../shared/constants/types/configuration'
-import {NsInfo} from '../../../../shared/constants/types/nsInfo'
+import {Configuration} from 'magicalstrings'
+import {NsInfo}  from 'magicalstrings'
 import {Choice} from '../settingsTypes'
-import {ADD_NEW_VALUE, menuChoices} from '../../../../shared/constants'
+const {ADD_NEW_VALUE, menuChoices} = require('magicalstrings').constants
 import {addStaticInstance} from './addStaticInstance'
 import {updateStaticInstance} from './updateStaticInstance'
-import {exitOption, progress, statusUpdate} from '../../../../shared/constants/chalkColors'
+const {exitOption, progress, statusUpdate} = require('magicalstrings').constants.chalkColors
 
 const inquirer = require('inquirer')
 

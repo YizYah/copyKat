@@ -1,8 +1,8 @@
-const {CustomCodeRepository} = require('magicalstrings').constants.types.custom
+import {CustomCodeRepository} from 'magicalstrings'
 const {customLocationNewRegExString} = require('magicalstrings').constants.Regex.regExNewCustomLocation
 const {replacedRexExText} = require('magicalstrings').constants.Regex.regExReplacedCodeSection
 import {getFileInfo} from './getFileInfo'
-const {Configuration} = require('magicalstrings').constants.types.configuration
+import {Configuration} from 'magicalstrings'
 import {commentDelimiters} from '../../templates/commentDelimiters'
 
 const fs = require('fs-extra')

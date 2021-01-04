@@ -1,6 +1,6 @@
-import {Configuration} from '../../../../shared/constants/types/configuration'
-import {NsInfo} from '../../../../shared/constants/types/nsInfo'
-import {setNsInfo} from '../../../../shared/nsFiles/setNsInfo'
+import {Configuration} from 'magicalstrings'
+import {NsInfo}  from 'magicalstrings'
+const setNsInfo = require('magicalstrings').nsFiles.setNsInfo
 
 const inquirer = require('inquirer')
 

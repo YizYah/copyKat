@@ -1,6 +1,6 @@
 import {extendedDescription} from './extendedDescription'
-import {Specs} from '../../../../shared/constants/types/configuration'
-import {attention} from '../../../../shared/constants/chalkColors'
+import {Specs} from 'magicalstrings'
+const {attention} = require('magicalstrings').constants.chalkColors
 
 export function askForValue(
   specsForInstance: any,

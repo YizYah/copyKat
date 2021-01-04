@@ -1,8 +1,8 @@
 const {dirNames, fileNames} = require('magicalstrings').constants
 // const findInFiles = require('find-in-files')
 // import {regExFileInfo} from '../constants/Regex/regExFileInfo'
-const {CustomCodeRepository} = require('magicalstrings').constants.types.custom
-const {Configuration} = require('magicalstrings').constants.types.configuration
+import {CustomCodeRepository} from 'magicalstrings'
+import {Configuration} from 'magicalstrings'
 import {storeCustomCodeForFile} from './storeCustomCodeForFile'
 
 const fs = require('fs-extra')

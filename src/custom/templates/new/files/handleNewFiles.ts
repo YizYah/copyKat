@@ -1,10 +1,10 @@
 import * as chalk from 'chalk'
 import {Difference} from 'dir-compare'
-import {getConfig} from '../../../shared/configs/getConfig'
-import {setConfig} from '../../../shared/configs/setConfig'
-import {progress} from '../../../shared/constants/chalkColors'
+const {getConfig} = require('magicalstrings').configs
+const {setConfig} = require('magicalstrings').configs
+const {progress} = require('magicalstrings').constants.chalkColors
 import {GenerationRequired} from '../../discrepancies/GenerationRequired'
-import {dingKats} from '../../../shared/constants/types/dingKats'
+const {dingKats} = require('magicalstrings').constants.types.dingKats
 
 const inquirer = require('inquirer')
 const fs = require('fs-extra')

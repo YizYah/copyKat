@@ -1,7 +1,7 @@
-import {Configuration} from '../../../shared/constants/types/configuration'
+import {Configuration} from 'magicalstrings'
 import {Choice} from './settingsTypes'
-import {exitOption, explanation, generalOption} from '../../../shared/constants/chalkColors'
-import {menuChoices} from '../../../shared/constants'
+const {exitOption, explanation, generalOption} = require('magicalstrings').constants.chalkColors
+const {menuChoices} = require('magicalstrings').constants
 
 const chalk = require('chalk')
 const inquirer = require('inquirer')

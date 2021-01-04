@@ -1,5 +1,5 @@
 import {unitNameFromSpec} from './unitNameFromSpec'
-const {Configuration} = require('magicalstrings').constants.types.configuration
+import {Configuration} from 'magicalstrings'
 const {fileOptions} = require('magicalstrings').constants.fileOptions
 
 const fs = require('fs-extra')

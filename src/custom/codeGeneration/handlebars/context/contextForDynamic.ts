@@ -1,6 +1,6 @@
-import {associationTypes, BoilerPlateInfoType, dataTypes, links, nodeTypes} from '../../../shared/constants'
-import {NsInfo} from '../../../shared/constants/types/nsInfo'
-import {Schema, TreeTypeChildrenList} from '../../../shared/constants/types/schema'
+const {associationTypes, BoilerPlateInfoType, dataTypes, links, nodeTypes} = require('magicalstrings').constants
+import {NsInfo}  from 'magicalstrings'
+import {Schema, TreeTypeChildrenList} from 'magicalstrings'
 import {
   allCaps,
   pluralLowercaseName,
@@ -10,7 +10,7 @@ import {
   singularName,
 } from '../../../shared/inflections'
 import {componentName} from '../../fileGeneration/dynamicComponents/componentName'
-import {Configuration} from '../../../shared/constants/types/configuration'
+import {Configuration} from 'magicalstrings'
 
 const Handlebars = require('handlebars')
 

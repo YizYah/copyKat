@@ -2,7 +2,7 @@ import {Result} from 'dir-compare'
 import * as chalk from 'chalk'
 const setConfig = require('magicalstrings').configs.setConfig
 const {attention, progress} = require('magicalstrings').constants.chalkColors
-const {Configuration} = require('magicalstrings').constants.types.configuration
+import {Configuration} from 'magicalstrings'
 import {commentDelimiters} from '../commentDelimiters'
 const {fileMatchesCustomFileFilter} = require('magicalstrings').fileMatchesCustomFileFilter
 import {GenerationRequired} from './GenerationRequired'

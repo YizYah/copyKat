@@ -1,6 +1,5 @@
-import {Configuration} from '../../../../shared/constants/types/configuration'
-import {NsInfo} from '../../../../shared/constants/types/nsInfo'
-import {setNsInfo} from '../../../../shared/nsFiles/setNsInfo'
+import {Configuration, NsInfo} from 'magicalstrings'
+const {setNsInfo} = require('magicalstrings').nsFiles
 import {types} from '../types'
 import {updateSpecSubtree} from './updateSpecSubtree'
 

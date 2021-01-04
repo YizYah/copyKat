@@ -1,4 +1,4 @@
-import {Configuration} from '../../../shared/constants/types/configuration'
+import {Configuration} from 'magicalstrings'
 import {installMainPackagesTaskList} from '../../../codeGeneration/codeBases/setup/installMainPackagesTaskList'
 import {installDevPackagesTaskList} from '../../../codeGeneration/codeBases/setup/installDevPackagesTaskList'
 

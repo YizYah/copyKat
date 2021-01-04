@@ -1,4 +1,4 @@
-import {NsInfo} from '../../../shared/constants/types/nsInfo'
+import {NsInfo}  from 'magicalstrings'
 
 const fs = require('fs-extra')
 

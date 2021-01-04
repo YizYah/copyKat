@@ -1,9 +1,8 @@
-import {Configuration} from '../../../../shared/constants/types/configuration'
-import {NsInfo} from '../../../../shared/constants/types/nsInfo'
-import {setNsInfo} from '../../../../shared/nsFiles/setNsInfo'
+import {Configuration, NsInfo}  from 'magicalstrings'
+const {setNsInfo} = require('magicalstrings').nsFiles.setNsInfo
 
 import {updateInstanceSpecs} from '../specs/updateInstanceSpecs'
-import {attention, exitOption, generalOption, statusUpdate} from '../../../../shared/constants/chalkColors'
+const {attention, exitOption, generalOption, statusUpdate} = require('magicalstrings').constants.chalkColors
 
 const inquirer = require('inquirer')
 

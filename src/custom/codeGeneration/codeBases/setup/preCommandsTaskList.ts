@@ -1,4 +1,4 @@
-import {CommandSpec} from '../../../shared/constants/types/configuration'
+import {CommandSpec} from 'magicalstrings'
 import {convertCommandArgs} from './convertCommandArgs'
 import {convertCommandOptions} from './convertCommandOptions'
 import {replaceGlobalValuesInObject} from '../settings/specs/replaceGlobalValuesInObject'

@@ -1,5 +1,5 @@
 import {promptTypes, promptUser} from './promptUser'
-import {testCodeDir} from '../../../shared/testCodeDir'
+const {testCodeDir} = require('magicalstrings').testCodeDir
 
 export async function getCodeDir(codeDir: string | undefined) {
   if (codeDir) return codeDir

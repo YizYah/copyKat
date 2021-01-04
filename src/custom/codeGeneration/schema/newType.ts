@@ -1,6 +1,6 @@
 const {dataTypes, nodeTypes, typePrefixes, constraintTypes} = require('magicalstrings').constants
-const {Schema, SpecNameInfo} = require('magicalstrings').constants.types.schema
-const {Configuration} = require('magicalstrings').constants.types.configuration
+import {Schema, SpecNameInfo} from 'magicalstrings'
+import {Configuration} from 'magicalstrings'
 const inflection = require('inflection')
 // const createActionsForType = require('./createActionsForType')
 // import {assnTypesForPrefix} from './assnTypesForPrefix'

@@ -1,4 +1,4 @@
-const {FileCustomCode} = require('magicalstrings').constants.types.custom
+import {FileCustomCode} from 'magicalstrings'
 import {
   regExReplacedCodeSectionGenerated,
   regExReplacedCodeSectionTagged,
@@ -7,7 +7,7 @@ const {customLocationNewRegExString} = require('magicalstrings').constants.Regex
 const {regExCleanupText} = require('magicalstrings').constants.Regex.regExCleanupText
 const {customCleanupRegExText} = require('magicalstrings').constants.Regex.regExCustomCleanup
 import {commentDelimiters} from '../../templates/commentDelimiters'
-const {Configuration} = require('magicalstrings').constants.types.configuration
+import {Configuration} from 'magicalstrings'
 
 export const fs = require('fs-extra')
 const path = require('path')

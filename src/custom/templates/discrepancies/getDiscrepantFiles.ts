@@ -1,4 +1,4 @@
-const {Configuration} = require('magicalstrings').constants.types.configuration
+import {Configuration} from 'magicalstrings'
 const getIgnoredList = require('magicalstrings').configs.getIgnoredList
 const {magicStrings} = require('magicalstrings').constants
 import {compareSync, Result} from 'dir-compare'

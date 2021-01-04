@@ -8,13 +8,13 @@ const {moveOverIgnored} = require('magicalstrings').moveOverIgnored
 import {generateCode} from './generateCode'
 import {insertCustomChanges} from './customCode/insertCustomChanges'
 import {updatePackageJson} from './packageJson/updatePackageJson'
-const {setNsInfo} = require('magicalstrings').nsFiles
 import {createSpecElement} from './codeBases/settings/specs/createSpecElement'
 import {getPackageInfoJson} from './packageJson/getPackageInfoJson'
-const {Schema} = require('magicalstrings').constants.types
+import {Schema} from 'magicalstrings'
 import {buildSchema} from './schema/buildSchema'
 
 const fs = require('fs-extra')
+const {setNsInfo} = require('magicalstrings').nsFiles
 
 // async function restoreMetaDir(codeDir: string) {
 //   const backupDir = `${codeDir}${suffixes.BACKUP_DIR}`

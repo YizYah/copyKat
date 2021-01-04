@@ -1,8 +1,8 @@
-const {Configuration} = require('magicalstrings').constants.types.configuration
+import {Configuration} from 'magicalstrings'
 
 const fs = require('fs-extra')
 
-const {NsInfo} = require('magicalstrings').constants.types.nsInfo
+import {NsInfo}  from 'magicalstrings'
 const {allCaps} = require('magicalstrings').inflections
 import {loadFileTemplate} from '../../templates/loadFileTemplate'
 const {parseSpecName} = require('magicalstrings').constants.parseSpecName

@@ -1,4 +1,4 @@
-const {SourceInfo} = require('magicalstrings').constants.types.schema
+import {SourceInfo} from 'magicalstrings'
 
 export function createSelectedRoot(unitInfo: SourceInfo) {
   const highestLevel = 'highestLevel'

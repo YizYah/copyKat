@@ -1,4 +1,4 @@
-const {Configuration} = require('magicalstrings').constants.types.configuration
+import {Configuration} from 'magicalstrings'
 import {commentDelimiters} from '../../templates/commentDelimiters'
 const {placeholders} = require('magicalstrings').constants
 

@@ -3,9 +3,9 @@ import {registerHelpers} from '../handlebars/registerHelpers'
 import {loadFileTemplate} from '../../templates/loadFileTemplate'
 const {fileNames} = require('magicalstrings').constants
 import {contextForStandard} from '../handlebars/context/contextForStandard'
-const {NsInfo} = require('magicalstrings').constants.types.nsInfo
-const {Schema} = require('magicalstrings').constants.types.schema
-const {Configuration} = require('magicalstrings').constants.types.configuration
+import {NsInfo}  from 'magicalstrings'
+import {Schema} from 'magicalstrings'
+import {Configuration} from 'magicalstrings'
 
 const fs = require('fs-extra')
 

@@ -1,16 +1,16 @@
 // import {TSError} from 'ts-node'
 // import {fileURLToPath} from 'url'
-import {BoilerPlateInfoType} from '../../../shared/constants'
-import {NsInfo} from '../../../shared/constants/types/nsInfo'
-import {Schema} from '../../../shared/constants/types/schema'
-import {singularName} from '../../../shared/inflections'
+const {BoilerPlateInfoType} = require('magicalstrings').constants
+import {NsInfo}  from 'magicalstrings'
+import {Schema} from 'magicalstrings'
+const {singularName} = require('magicalstrings').inflections
 import {contextForDynamic} from '../../handlebars/context/contextForDynamic'
 import {loadFileTemplate} from '../../../templates/loadFileTemplate'
 import {makeDirs} from '../makeDirs'
 import {registerHelpers} from '../../handlebars/registerHelpers'
 import {registerPartials} from '../../handlebars/registerPartials'
 import {componentName} from './componentName'
-import {Configuration} from '../../../shared/constants/types/configuration'
+import {Configuration} from 'magicalstrings'
 import {replaceCommentDelimiters} from '../replaceCommentDelimiters'
 // import {generic} from '../sections/generic'
 

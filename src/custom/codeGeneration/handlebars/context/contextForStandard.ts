@@ -1,6 +1,6 @@
-import {dataTypes, nodeTypes, magicStrings, links} from '../../../shared/constants'
-import {NsInfo, BackendIdList} from '../../../shared/constants/types/nsInfo'
-import {Schema} from '../../../shared/constants/types/schema'
+const {dataTypes, nodeTypes, magicStrings, links} = require('magicalstrings').constants
+import {NsInfo, BackendIdList} from 'magicalstrings'
+import {Schema} from 'magicalstrings'
 import {
   allCaps,
   pluralLowercaseName,
@@ -8,7 +8,7 @@ import {
   singularName,
 } from '../../../shared/inflections'
 import {createGeneralInfo} from './createGeneralInfo'
-import {Configuration} from '../../../shared/constants/types/configuration'
+import {Configuration} from 'magicalstrings'
 
 const Handlebars = require('handlebars')
 

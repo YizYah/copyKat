@@ -1,7 +1,7 @@
-import {NsInfo} from '../../../shared/constants/types/nsInfo'
-import {Schema} from '../../../shared/constants/types/schema'
+import {NsInfo}  from 'magicalstrings'
+import {Schema} from 'magicalstrings'
 import {generateUnitTypeFiles} from './generateUnitTypeFiles'
-import {Configuration} from '../../../shared/constants/types/configuration'
+import {Configuration} from 'magicalstrings'
 
 export async function generateAppTypeFiles(
   userClass: string,

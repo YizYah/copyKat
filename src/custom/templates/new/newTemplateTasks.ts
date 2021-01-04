@@ -21,6 +21,7 @@ export async function newTemplateTasks(requirements: TemplateRequirements) {
       title: 'Set up Recommended Directories',
       task: async () => {
         try {
+          console.log(`templateDir = ${templateDir}`)
           await ensureDirectory(templateDir)
         } catch (error) {
           throw new Error(`${chalk.red('error creating recommended directories:')}

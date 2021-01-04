@@ -1,6 +1,6 @@
-const {CustomCodeByFile, CustomCodeCollection, CustomCodeRepository} = require('magicalstrings').constants.types.custom
+import {CustomCodeByFile, CustomCodeCollection, CustomCodeRepository} from 'magicalstrings'
 import {fs, updateCustomCodeForFile} from './updateCustomCodeForFile'
-const {Configuration} = require('magicalstrings').constants.types.configuration
+import {Configuration} from 'magicalstrings'
 
 function moveOverCodeSections(
   customCodeCollection: CustomCodeCollection,

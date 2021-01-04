@@ -1,5 +1,4 @@
-const {NsJoinInfo} = require('magicalstrings').constants.types.nsInfo
-const {Schema} = require('magicalstrings').constants.types.schema
+import {NsJoinInfo, Schema} from 'magicalstrings'
 
 // import {associationTypes} from '../../constants'
 const {parseSpecName} = require('magicalstrings').constants.parseSpecName

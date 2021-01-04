@@ -1,4 +1,4 @@
-import {regExObjectValueString} from '../../../../shared/constants/Regex/regExObjectValueString'
+const {regExObjectValueString} = require('magicalstrings').constants.Regex.regExObjectValueString
 
 const regExObjectValue = new RegExp(regExObjectValueString, 'g')
 const globalObjects = {

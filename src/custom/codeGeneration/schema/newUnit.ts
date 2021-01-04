@@ -1,6 +1,6 @@
 const {unitTypes, unitPrefixes} = require('magicalstrings').constants
-const {UnitDiscription} = require('magicalstrings').constants.types.nsInfo
-const {Schema, SpecNameInfo} = require('magicalstrings').constants.types.schema
+import {UnitDiscription} from 'magicalstrings'
+import {Schema, SpecNameInfo} from 'magicalstrings'
 
 const traverse = require('traverse')
 
@@ -8,7 +8,7 @@ const {allCaps} = require('magicalstrings').inflections
 import {newType} from './newType'
 // const pluralize = require('pluralize');
 const {parseSpecName} = require('magicalstrings').constants.parseSpecName
-const {Configuration} = require('magicalstrings').constants.types.configuration
+import {Configuration} from 'magicalstrings'
 // const highestLevel = 'highestLevel';
 
 // const getTypeString = (node: any) => {

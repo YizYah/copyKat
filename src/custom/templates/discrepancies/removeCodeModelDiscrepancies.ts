@@ -1,5 +1,5 @@
 const {links, suffixes} = require('magicalstrings').constants
-const {Configuration} = require('magicalstrings').constants.types.configuration
+import {Configuration} from 'magicalstrings'
 const getConfig = require('magicalstrings').configs.getConfig
 import {handleNewFiles} from '../new/files/handleNewFiles'
 import {handleUniqueModelFiles} from './handleUniqueModelFiles'

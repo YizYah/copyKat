@@ -1,4 +1,4 @@
-import {Specs, SpecSet} from '../../../../shared/constants/types/configuration'
+import {Specs, SpecSet} from 'magicalstrings'
 import {getQuestionsForSpecSubtree} from './getQuestionsForSpecSubtree'
 import {ADD_NEW, AnswersForStaticInstanceSpec, DELETE, DONE, EDIT, EDIT_OPTIONS, TO_EDIT, types} from '../types'
 import {addNewSpecElement} from './addNewSpecElement'

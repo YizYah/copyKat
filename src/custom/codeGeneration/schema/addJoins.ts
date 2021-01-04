@@ -1,5 +1,4 @@
-const {JoinsData} = require('magicalstrings').constants.types.nsInfo
-const {Schema} = require('magicalstrings').constants.types.schema
+import {JoinsData, Schema} from 'magicalstrings'
 
 import {newJoin} from './newJoin'
 
