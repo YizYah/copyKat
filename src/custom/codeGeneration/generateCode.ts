@@ -1,13 +1,11 @@
-import {dirNames, fileNames} from '../shared/constants'
-import {NsInfo} from '../shared/constants/types/nsInfo'
-import {Schema} from '../shared/constants/types/schema'
+const {dirNames, fileNames} = require('magicalstrings').constants
+import {Configuration, NsInfo, Schema} from 'magicalstrings'
 import {configuredDirs} from './fileGeneration/configuredDirs'
 import {dynamicFiles} from './fileGeneration/dynamicFiles'
 import {buildSchema} from './schema/buildSchema'
 import {standardFiles} from './fileGeneration/standardFiles'
 import {staticFiles} from './fileGeneration/staticFiles'
 import {generateAppTypeFiles} from './fileGeneration/dynamicComponents/generateAppTypeFiles'
-import {Configuration} from '../shared/constants/types/configuration'
 
 // const fs = require('fs-extra')
 

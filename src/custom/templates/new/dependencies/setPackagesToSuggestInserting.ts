@@ -1,4 +1,4 @@
-import {removeNpmDependencyPrefix} from '../../../shared/removeNpmDependencyPrefix'
+const {removeNpmDependencyPrefix} = require('magicalstrings').removeNpmDependencyPrefix
 import {DependencySet} from './dependencyTypes'
 
 const fs = require('fs-extra')

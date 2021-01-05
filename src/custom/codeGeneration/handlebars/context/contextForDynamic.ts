@@ -1,17 +1,16 @@
-import {associationTypes, BoilerPlateInfoType, dataTypes, links, nodeTypes} from '../../../shared/constants'
-import {NsInfo} from '../../../shared/constants/types/nsInfo'
-import {Schema, TreeTypeChildrenList} from '../../../shared/constants/types/schema'
-import {
+import {componentName} from '../../fileGeneration/dynamicComponents/componentName'
+import {BoilerPlateInfoType, Configuration, NsInfo, Schema, TreeTypeChildrenList} from 'magicalstrings'
+
+const {associationTypes, dataTypes, links, nodeTypes} =
+  require('magicalstrings').constants
+const {
   allCaps,
   pluralLowercaseName,
   pluralName,
   queryForSource,
   relationshipsForSource,
   singularName,
-} from '../../../shared/inflections'
-import {componentName} from '../../fileGeneration/dynamicComponents/componentName'
-import {Configuration} from '../../../shared/constants/types/configuration'
-
+} = require('magicalstrings').inflections
 const Handlebars = require('handlebars')
 
 const fileInfoString = Handlebars.compile('unit: {{unitName}}, comp: {{component}}')

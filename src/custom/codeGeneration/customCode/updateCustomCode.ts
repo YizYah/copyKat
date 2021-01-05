@@ -1,6 +1,6 @@
-import {CustomCodeByFile, CustomCodeCollection, CustomCodeRepository} from '../../shared/constants/types/custom'
+import {CustomCodeByFile, CustomCodeCollection, CustomCodeRepository} from 'magicalstrings'
 import {fs, updateCustomCodeForFile} from './updateCustomCodeForFile'
-import {Configuration} from '../../shared/constants/types/configuration'
+import {Configuration} from 'magicalstrings'
 
 function moveOverCodeSections(
   customCodeCollection: CustomCodeCollection,

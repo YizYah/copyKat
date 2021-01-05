@@ -1,26 +1,16 @@
-// import {TSError} from 'ts-node'
-// import {fileURLToPath} from 'url'
-import {BoilerPlateInfoType} from '../../../shared/constants'
-import {NsInfo} from '../../../shared/constants/types/nsInfo'
-import {Schema} from '../../../shared/constants/types/schema'
-import {singularName} from '../../../shared/inflections'
 import {contextForDynamic} from '../../handlebars/context/contextForDynamic'
 import {loadFileTemplate} from '../../../templates/loadFileTemplate'
 import {makeDirs} from '../makeDirs'
 import {registerHelpers} from '../../handlebars/registerHelpers'
 import {registerPartials} from '../../handlebars/registerPartials'
 import {componentName} from './componentName'
-import {Configuration} from '../../../shared/constants/types/configuration'
+import {BoilerPlateInfoType, Configuration, NsInfo, Schema} from 'magicalstrings'
 import {replaceCommentDelimiters} from '../replaceCommentDelimiters'
-// import {generic} from '../sections/generic'
 
 const Handlebars = require('handlebars')
 const H = require('just-handlebars-helpers')
 const fs = require('fs-extra')
-// const fetch = require('node-fetch')
-// const Handlebars = require('handlebars')
-// const boilerPlateFromInfo = (boilerPlateInfo: BoilerPlateInfoType) =>
-//   boilerPlates[boilerPlateInfo.formType + boilerPlateInfo.dataType + boilerPlateInfo.nodeType]
+const {singularName} = require('magicalstrings').inflections
 
 H.registerHelpers(Handlebars)
 

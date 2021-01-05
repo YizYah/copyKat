@@ -1,5 +1,4 @@
-import {JoinsData} from '../../shared/constants/types/nsInfo'
-import {Schema} from '../../shared/constants/types/schema'
+import {JoinsData, Schema} from 'magicalstrings'
 
 import {newJoin} from './newJoin'
 

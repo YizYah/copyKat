@@ -1,5 +1,5 @@
-import {pluralName, singularName} from '../../../shared/inflections'
-import {ComponentTypeSpec} from '../../../shared/constants/types/configuration'
+const {pluralName, singularName} = require('magicalstrings').inflections
+import {ComponentTypeSpec} from 'magicalstrings'
 
 export const componentName = (type: string,
   componentTypeSpec: ComponentTypeSpec) => {

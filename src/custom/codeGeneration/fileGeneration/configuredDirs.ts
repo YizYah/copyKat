@@ -1,6 +1,6 @@
 import {unitNameFromSpec} from './unitNameFromSpec'
-import {Configuration} from '../../shared/constants/types/configuration'
-import {fileOptions} from '../../shared/constants/fileOptions'
+import {Configuration} from 'magicalstrings'
+const {fileOptions} = require('magicalstrings').constants.fileOptions
 
 const fs = require('fs-extra')
 

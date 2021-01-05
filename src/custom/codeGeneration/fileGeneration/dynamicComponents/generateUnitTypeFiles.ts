@@ -1,8 +1,8 @@
-import {unitTypes} from '../../../shared/constants'
-import {NsInfo} from '../../../shared/constants/types/nsInfo'
-import {Schema} from '../../../shared/constants/types/schema'
+const {unitTypes} = require('magicalstrings').constants
+import {NsInfo}  from 'magicalstrings'
+import {Schema} from 'magicalstrings'
 import {generateFilesForType} from './generateFilesForType'
-import {Configuration} from '../../../shared/constants/types/configuration'
+import {Configuration} from 'magicalstrings'
 
 export async function generateUnitTypeFiles(
   source: string,

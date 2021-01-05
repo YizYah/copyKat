@@ -1,4 +1,4 @@
-import {CommandSpec, Configuration} from '../../../shared/constants/types/configuration'
+import {CommandSpec, Configuration} from 'magicalstrings'
 import {preCommandsTaskList} from '../../../codeGeneration/codeBases/setup/preCommandsTaskList'
 import {interactiveSequence} from '../../../codeGeneration/codeBases/setup/interactiveSequence'
 

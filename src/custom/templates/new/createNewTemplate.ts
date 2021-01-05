@@ -1,13 +1,13 @@
 import {TemplateRequirements} from './TemplateRequirements'
 import {newTemplateQuestions} from './newTemplateQuestions'
 import {generateTemplateFiles} from './generateTemplateFiles'
-import {getConfig} from '../../shared/configs/getConfig'
-import {suffixes} from '../../shared/constants'
+const getConfig = require('magicalstrings').configs.getConfig
+const {suffixes} = require('magicalstrings').constants
 import {getPreCommands} from './preCommands/getPreCommands'
-import {copyCodeBaseToNewDir} from '../../shared/copyCodeBaseToNewDir'
+const {copyCodeBaseToNewDir} = require('magicalstrings').copyCodeBaseToNewDir
 import {setPackagesToSuggestInserting} from './dependencies/setPackagesToSuggestInserting'
 import {setupDependencies} from './dependencies/setupDependencies'
-import {setConfig} from '../../shared/configs/setConfig'
+const setConfig = require('magicalstrings').configs.setConfig
 import {createCodeBase} from '../../codeGeneration/codeBases/createCodeBase'
 
 const fs = require('fs-extra')

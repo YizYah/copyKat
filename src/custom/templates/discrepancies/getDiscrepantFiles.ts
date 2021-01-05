@@ -1,12 +1,12 @@
-import {Configuration} from '../../shared/constants/types/configuration'
-import {getIgnoredList} from '../../shared/configs/getIgnoredList'
-import {magicStrings} from '../../shared/constants'
+import {Configuration} from 'magicalstrings'
+const getIgnoredList = require('magicalstrings').configs.getIgnoredList
+const {magicStrings} = require('magicalstrings').constants
 import {compareSync, Result} from 'dir-compare'
 
 export async function getDiscrepantFiles(
   config: Configuration, codeDir: string, modelDir: string
 ) {
-  const allIgnored = getIgnoredList(config).map(dir => {
+  const allIgnored = getIgnoredList(config).map((dir: any) => {
     if (dir.includes('/')) return '/' + dir
     return dir
   })

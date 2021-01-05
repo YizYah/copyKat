@@ -1,4 +1,4 @@
-import {SourceInfo} from '../../shared/constants/types/schema'
+import {SourceInfo} from 'magicalstrings'
 
 export const buildSelectionTree = (
   node: string,

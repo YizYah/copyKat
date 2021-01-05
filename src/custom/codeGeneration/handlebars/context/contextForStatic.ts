@@ -1,8 +1,8 @@
-import {Configuration} from '../../../shared/constants/types/configuration'
-import {NsInfo} from '../../../shared/constants/types/nsInfo'
-import {pluralLowercaseName, pluralName, singularName} from '../../../shared/inflections'
+import {Configuration} from 'magicalstrings'
+import {NsInfo}  from 'magicalstrings'
+const {pluralLowercaseName, pluralName, singularName} = require('magicalstrings').inflections
 import {createGeneralInfo} from './createGeneralInfo'
-import {links} from '../../../shared/constants'
+const {links} = require('magicalstrings').constants
 
 const Handlebars = require('handlebars')
 

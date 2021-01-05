@@ -1,6 +1,6 @@
-import {suffixes} from '../../shared/constants'
+const {suffixes} = require('magicalstrings').constants
 import {TemplateRequirements} from './TemplateRequirements'
-import {ensureDirectory} from '../../shared/ensureDirectory'
+const {ensureDirectory} = require('magicalstrings').ensureDirectory
 import {createTemplateFiles} from './createTemplateFiles'
 import {chalk, createSampleAndTemplate} from './createSampleAndTemplate'
 

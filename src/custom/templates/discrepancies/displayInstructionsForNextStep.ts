@@ -1,7 +1,7 @@
 import {GenerationRequired} from './GenerationRequired'
-import {suffixes} from '../../shared/constants'
-import {dingKats} from '../../shared/constants/types/dingKats'
-import {generalOption} from '../../shared/constants/chalkColors'
+const {suffixes} = require('magicalstrings').constants
+const {dingKats} = require('magicalstrings').constants.types.dingKats
+const {generalOption} = require('magicalstrings').constants.chalkColors
 
 export function displayInstructionsForNextStep(templateDir: string, generationRequired: GenerationRequired) {
   if (generationRequired === GenerationRequired.None) return

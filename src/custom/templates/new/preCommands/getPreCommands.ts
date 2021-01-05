@@ -1,4 +1,4 @@
-import {CommandSpec, Configuration} from '../../../shared/constants/types/configuration'
+import {CommandSpec, Configuration} from 'magicalstrings'
 import * as chalk from 'chalk'
 
 const inquirer = require('inquirer')

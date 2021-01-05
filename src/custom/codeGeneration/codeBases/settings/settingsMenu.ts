@@ -1,11 +1,11 @@
-import {Configuration} from '../../../shared/constants/types/configuration'
-import {NsInfo} from '../../../shared/constants/types/nsInfo'
-import {exitOption, generalOption} from '../../../shared/constants/chalkColors'
+import {Configuration} from 'magicalstrings'
+import {NsInfo}  from 'magicalstrings'
+const {exitOption, generalOption} = require('magicalstrings').constants.chalkColors
 import {DONE, types} from './types'
 import {staticSettings} from './staticSettings'
 import {updateSpecSubtree} from './specs/updateSpecSubtree'
-import {setNsInfo} from '../../../shared/nsFiles/setNsInfo'
-import {answerValues, questionNames} from '../../../shared/constants'
+const setNsInfo = require('magicalstrings').nsFiles.setNsInfo
+const {answerValues, questionNames} = require('magicalstrings').constants
 
 const inquirer = require('inquirer')
 

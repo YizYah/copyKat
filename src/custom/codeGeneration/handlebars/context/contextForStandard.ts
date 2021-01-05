@@ -1,17 +1,16 @@
-import {dataTypes, nodeTypes, magicStrings, links} from '../../../shared/constants'
-import {NsInfo, BackendIdList} from '../../../shared/constants/types/nsInfo'
-import {Schema} from '../../../shared/constants/types/schema'
-import {
+import {NsInfo, BackendIdList} from 'magicalstrings'
+import {Schema} from 'magicalstrings'
+import {createGeneralInfo} from './createGeneralInfo'
+import {Configuration} from 'magicalstrings'
+
+const {dataTypes, nodeTypes, magicStrings, links} = require('magicalstrings').constants
+const {
   allCaps,
   pluralLowercaseName,
   pluralName,
   singularName,
-} from '../../../shared/inflections'
-import {createGeneralInfo} from './createGeneralInfo'
-import {Configuration} from '../../../shared/constants/types/configuration'
-
+}  = require('magicalstrings').inflections
 const Handlebars = require('handlebars')
-
 const fileInfoString = Handlebars.compile('unit: {{unitName}}, comp: {{component}}')
 
 export const contextForStandard = async (

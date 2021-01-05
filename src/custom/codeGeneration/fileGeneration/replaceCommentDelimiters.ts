@@ -1,6 +1,6 @@
-import {Configuration} from '../../shared/constants/types/configuration'
+import {Configuration} from 'magicalstrings'
 import {commentDelimiters} from '../../templates/commentDelimiters'
-import {placeholders} from '../../shared/constants'
+const {placeholders} = require('magicalstrings').constants
 
 const path = require('path')
 

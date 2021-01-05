@@ -10,9 +10,9 @@ import {Command, flags} from '@oclif/command'
 /* ns__custom_start customImports */
 import {createNewTemplate} from '../custom/templates/new/createNewTemplate'
 import {printInstructionsForNewTemplate} from '../custom/templates/new/printInstructionsForNewTemplate'
-import {resolveDir} from '../custom/shared/resolveDir'
-import {dingKats} from '../custom/shared/constants/types/dingKats'
-import {suffixes} from '../custom/shared/constants'
+const {resolveDir} = require('magicalstrings').resolveDir
+const {dingKats} = require('magicalstrings').constants.types
+const {suffixes} = require('magicalstrings').constants
 import {removeCodeModelDiscrepancies} from '../custom/templates/discrepancies/removeCodeModelDiscrepancies'
 
 /* ns__custom_end customImports */

@@ -1,14 +1,14 @@
 'use strict'
 
-import {NsInfo} from '../../shared/constants/types/nsInfo'
-import {Schema} from '../../shared/constants/types/schema'
+import {NsInfo}  from 'magicalstrings'
+import {Schema} from 'magicalstrings'
 import {addUserClass} from './newUserClass'
 
 import {addUnits} from './addUnits'
 import {addJoins} from './addJoins'
 import {setSelectionRoots} from './setSelectionRoots'
-import {Configuration} from '../../shared/constants/types/configuration'
-import {allCaps} from '../../shared/inflections'
+import {Configuration} from 'magicalstrings'
+const {allCaps} = require('magicalstrings').inflections
 const emptySchema: Schema = {
   userClasses: {},
   sources: {},

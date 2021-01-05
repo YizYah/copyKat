@@ -1,8 +1,5 @@
-import {Units} from '../../shared/constants/types/nsInfo'
-import {Schema} from '../../shared/constants/types/schema'
-
 import {newUnit} from  './newUnit'
-import {Configuration} from '../../shared/constants/types/configuration'
+import {Configuration, Schema, Units} from 'magicalstrings'
 
 export function addUnits(
   units: Units, schema: Schema, config: Configuration

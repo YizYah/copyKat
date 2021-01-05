@@ -1,15 +1,15 @@
 import {installDevPackagesTaskList} from './setup/installDevPackagesTaskList'
-import {docPages, dirNames, fileNames, links, suffixes} from '../../shared/constants'
-import {Configuration} from '../../shared/constants/types/configuration'
-import {getConfig} from '../../shared/configs/getConfig'
-import {CustomCodeRepository} from '../../shared/constants/types/custom'
-import {dirOptions} from '../../shared/dirOptions'
+const {docPages, dirNames, fileNames, links, suffixes} = require('magicalstrings').constants
+import {Configuration} from 'magicalstrings'
+const getConfig = require('magicalstrings').configs.getConfig
+import {CustomCodeRepository}  from 'magicalstrings'
+const {dirOptions} = require('magicalstrings').dirOptions
 import {createNewCode} from './createNewCode'
 import {installMainPackagesTaskList} from './setup/installMainPackagesTaskList'
 import {preCommandsTaskList} from './setup/preCommandsTaskList'
 import {interactiveSequence} from './setup/interactiveSequence'
-import {setNsInfo} from '../../shared/nsFiles/setNsInfo'
-import {NsInfo} from '../../shared/constants/types/nsInfo'
+const setNsInfo = require('magicalstrings').nsFiles.setNsInfo
+import {NsInfo}  from 'magicalstrings'
 
 const fs = require('fs-extra')
 const Listr = require('listr')

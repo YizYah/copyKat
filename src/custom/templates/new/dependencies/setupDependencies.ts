@@ -1,5 +1,5 @@
 'use strict'
-import {Configuration} from '../../../shared/constants/types/configuration'
+import {Configuration} from 'magicalstrings'
 import {AnswersForPackages, DependencyChoiceList, DependencyList, DependencySet} from './dependencyTypes'
 
 const chalk = require('chalk')

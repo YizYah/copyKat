@@ -8,10 +8,11 @@
 import {Command, flags} from '@oclif/command'
 
 /* ns__custom_start customImports */
-import {resolveDir} from '../custom/shared/resolveDir'
 import {removeCodeModelDiscrepancies} from '../custom/templates/discrepancies/removeCodeModelDiscrepancies'
-import {suffixes} from '../custom/shared/constants'
-import {dingKats} from '../custom/shared/constants/types/dingKats'
+
+const {resolveDir} = require('magicalstrings').resolveDir
+const {suffixes} = require('magicalstrings').constants
+const {dingKats} = require('magicalstrings').constants.types.dingKats
 /* ns__custom_end customImports */
 /* ns__end_section imports */
 

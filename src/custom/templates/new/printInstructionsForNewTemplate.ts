@@ -1,6 +1,6 @@
-// import {links, suffixes} from '../../shared/constants'
-// import {attention, generalOption} from '../../shared/constants/chalkColors'
-import {dingKats} from '../../shared/constants/types/dingKats'
+// const {links, suffixes} = require('magicalstrings').constants
+// const {attention, generalOption} = require('magicalstrings').constants.chalkColors
+const {dingKats} = require('magicalstrings').constants.types.dingKats
 
 export function printInstructionsForNewTemplate(templateDir: string) {
   return dingKats.SMILING + ` Your template has been created at ${templateDir}.

@@ -1,20 +1,20 @@
-import {dirNames, fileNames, suffixes} from '../shared/constants'
-import {getNsInfo} from '../shared/nsFiles/getNsInfo'
-import {getConfig} from '../shared/configs/getConfig'
+const {dirNames, fileNames, suffixes} = require('magicalstrings').constants
+const {getNsInfo} = require('magicalstrings').nsFiles
+const {getConfig} = require('magicalstrings').configs
 import {storeAddedCode} from './customCode/storeAddedCode'
-import {copyCodeBaseToNewDir} from '../shared/copyCodeBaseToNewDir'
+const {copyCodeBaseToNewDir} = require('magicalstrings').copyCodeBaseToNewDir
 // import {ensureIgnoredExist} from '../testing/ensureIgnoredExist'
-import {moveOverIgnored} from '../shared/moveOverIgnored'
+const {moveOverIgnored} = require('magicalstrings').moveOverIgnored
 import {generateCode} from './generateCode'
 import {insertCustomChanges} from './customCode/insertCustomChanges'
 import {updatePackageJson} from './packageJson/updatePackageJson'
-import {setNsInfo} from '../shared/nsFiles/setNsInfo'
 import {createSpecElement} from './codeBases/settings/specs/createSpecElement'
 import {getPackageInfoJson} from './packageJson/getPackageInfoJson'
-import {Schema} from '../shared/constants/types/schema'
+import {Schema} from 'magicalstrings'
 import {buildSchema} from './schema/buildSchema'
 
 const fs = require('fs-extra')
+const {setNsInfo} = require('magicalstrings').nsFiles
 
 // async function restoreMetaDir(codeDir: string) {
 //   const backupDir = `${codeDir}${suffixes.BACKUP_DIR}`

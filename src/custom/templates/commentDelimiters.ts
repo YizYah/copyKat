@@ -1,5 +1,4 @@
-import {Configuration} from '../shared/constants/types/configuration'
-
+import {Configuration} from 'magicalstrings'
 const globalDefaultOpen = '/*'
 const globalDefaultClose = '*/'
 

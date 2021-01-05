@@ -1,5 +1,5 @@
-import {ensureDirectory} from '../../shared/ensureDirectory'
-import {dirNames} from '../../shared/constants'
+const {ensureDirectory} = require('magicalstrings').ensureDirectory
+const {dirNames} = require('magicalstrings').constants
 
 export const chalk = require('chalk')
 const fs = require('fs-extra')

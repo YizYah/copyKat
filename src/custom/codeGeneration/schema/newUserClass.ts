@@ -1,4 +1,4 @@
-import {Schema} from '../../shared/constants/types/schema'
+import {Schema} from 'magicalstrings'
 
 export const addUserClass = (schema: Schema, userClassName: string) => {
   schema.userClasses[userClassName] = {

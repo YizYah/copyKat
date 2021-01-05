@@ -1,7 +1,7 @@
 import {Result} from 'dir-compare'
-import {attention, generalOption} from '../../shared/constants/chalkColors'
-import {links} from '../../shared/constants'
-import {dingKats} from '../../shared/constants/types/dingKats'
+const {attention, generalOption} = require('magicalstrings').constants.chalkColors
+const {links} = require('magicalstrings').constants
+const {dingKats} = require('magicalstrings').constants.types.dingKats
 
 export function displayModifiedFiles(res: Result) {
   if (!res || !res.diffSet) return

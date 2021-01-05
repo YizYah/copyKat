@@ -1,13 +1,13 @@
 import {updateCustomCode} from './updateCustomCode'
 import * as path from 'path'
-import {CustomCodeRepository} from '../../shared/constants/types/custom'
-import {singularName} from '../../shared/inflections'
+import {CustomCodeRepository} from 'magicalstrings'
+const {singularName} = require('magicalstrings').inflections
 
 const chalk = require('chalk')
 
 import execa = require('execa');
 import {fs} from './updateCustomCodeForFile'
-import {Configuration} from '../../shared/constants/types/configuration'
+import {Configuration} from 'magicalstrings'
 
 async function updateCode(fileName: string,
   sedString: string,) {

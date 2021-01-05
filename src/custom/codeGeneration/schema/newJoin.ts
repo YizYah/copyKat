@@ -1,8 +1,7 @@
-import {NsJoinInfo} from '../../shared/constants/types/nsInfo'
-import {Schema} from '../../shared/constants/types/schema'
+import {NsJoinInfo, Schema} from 'magicalstrings'
 
 // import {associationTypes} from '../../constants'
-import {parseSpecName} from '../../shared/constants/parseSpecName'
+const {parseSpecName} = require('magicalstrings').constants.parseSpecName
 // import {createActionsForType} from './createActionsForType'
 // import {assnTypesForPrefix} from './assnTypesForPrefix'
 // const newType = require('newType');
