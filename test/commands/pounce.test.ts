@@ -9,7 +9,7 @@ please follow all rules at https://ns-flip.nostack.net//Safe-Custom-Code
 /* ns__start_section imports */
 import {expect, test} from '@oclif/test'
 /* ns__custom_start customImports */
-import {resolveDir} from '../../src/custom/shared/resolveDir'
+const {resolveDir} = require('magicalstrings').resolveDir
 
 /* ns__custom_end customImports */
 /* ns__end_section imports */
