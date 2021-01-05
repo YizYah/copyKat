@@ -48,8 +48,6 @@ async run() {
   const code = finalTemplateDir + suffixes.SAMPLE_DIR
   const model = finalTemplateDir + suffixes.MODEL_DIR
 
-  console.log('\nfoo')
-  console.log(`\ncode=${code}, model=${model} finalTemplateDir=${finalTemplateDir}`)
   try {
     await removeCodeModelDiscrepancies(
       finalTemplateDir, code, model

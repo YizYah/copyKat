@@ -12,7 +12,7 @@ import {createNewTemplate} from '../custom/templates/new/createNewTemplate'
 import {printInstructionsForNewTemplate} from '../custom/templates/new/printInstructionsForNewTemplate'
 const {resolveDir} = require('magicalstrings').resolveDir
 const {dingKats} = require('magicalstrings').constants.types
-const {suffixes} = require('magicalstrings').constants.suffixes
+const {suffixes} = require('magicalstrings').constants
 import {removeCodeModelDiscrepancies} from '../custom/templates/discrepancies/removeCodeModelDiscrepancies'
 
 /* ns__custom_end customImports */
