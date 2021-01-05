@@ -6,7 +6,7 @@ import {compareSync, Result} from 'dir-compare'
 export async function getDiscrepantFiles(
   config: Configuration, codeDir: string, modelDir: string
 ) {
-  const allIgnored = getIgnoredList(config).map(dir => {
+  const allIgnored = getIgnoredList(config).map((dir: any) => {
     if (dir.includes('/')) return '/' + dir
     return dir
   })

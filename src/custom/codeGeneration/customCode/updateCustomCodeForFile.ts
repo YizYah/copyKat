@@ -1,8 +1,8 @@
 import {FileCustomCode} from 'magicalstrings'
-import {
+const {
   regExReplacedCodeSectionGenerated,
   regExReplacedCodeSectionTagged,
-} from '../../shared/constants/Regex/regExReplacedCodeSection'
+}  = require('magicalstrings').constants.Regex.regExReplacedCodeSection
 const {customLocationNewRegExString} = require('magicalstrings').constants.Regex.regExNewCustomLocation
 const {regExCleanupText} = require('magicalstrings').constants.Regex.regExCleanupText
 const {customCleanupRegExText} = require('magicalstrings').constants.Regex.regExCustomCleanup

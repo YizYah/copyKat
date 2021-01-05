@@ -32,7 +32,7 @@ describe('chase command', () => {
   // .stdout()
   // .command(['chase', fullBogusTemplateDir])
   // .it('runs chase with all args and flags', ctx => {
-  //   expect(ctx.stdout).to.contain('template directory ${fullBogusModelDir} not found')
+  //   expect(ctx.stdout).to.contain('foo')
   // })
 })
 /* ns__custom_end tests */

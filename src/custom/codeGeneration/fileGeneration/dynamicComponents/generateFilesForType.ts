@@ -1,8 +1,8 @@
-const {BoilerPlateInfoType, nodeTypes} = require('magicalstrings').constants
+const {nodeTypes} = require('magicalstrings').constants
 import {NsInfo}  from 'magicalstrings'
 import {SourceInfo, Schema} from 'magicalstrings'
 import {generateTypeFile} from './generateTypeFile'
-import {Configuration} from 'magicalstrings'
+import {BoilerPlateInfoType, Configuration} from 'magicalstrings'
 
 export async function generateFilesForType(
   appInfo: NsInfo,
