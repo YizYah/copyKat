@@ -162,7 +162,7 @@ export async function handleUniqueModelFiles(
   }
 
   // eslint-disable-next-line no-console
-  console.log(dingKats.POUTING + 'Some files in the model code base are ' + attention(' not being generated:'))
+  console.log(dingKats.POUTING + ' Some files in the model code base are ' + attention(' not being generated:'))
   // eslint-disable-next-line no-console
 
   let i

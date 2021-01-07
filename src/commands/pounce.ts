@@ -59,7 +59,6 @@ async run() {
     this.log(printInstructionsForNewTemplate(finalTemplateDir))
   } catch (error) {
     this.log(error)
-    throw new Error(dingKats.ERROR + ` Problem creating template: ${error}`)
   }
 
   const code = finalTemplateDir + suffixes.SAMPLE_DIR
