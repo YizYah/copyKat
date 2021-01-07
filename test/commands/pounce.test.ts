@@ -19,19 +19,19 @@ const {resolveDir} = require('magicalstrings').resolveDir
 describe('pounce', () => {
   const bogusModelDir = 'nonexistentSampleModel'
   const fullBogusModelDir = resolveDir(bogusModelDir)
-  test
-  .stderr()
-  .command(['pounce', bogusModelDir, '-t', 'nonexistentTemplateDir'])
-  .catch(error => {
-    expect(error.message).to.contain(`model directory ${fullBogusModelDir} not found`)
-  })
-  .it('requires proper args')
-
   // test
-  // .stdout()
-  // .command(['pounce', 'sampleModel', '-t', 'sampleTemplateDir'])
-  // .it('runs pounce with all args and flags', ctx => {
-  //   expect(ctx.stdout).to.contain('You have executed the pounce command')
+  // .stderr()
+  // .command(['pounce', bogusModelDir, '-t', 'nonexistentTemplateDir'])
+  // .catch(error => {
+  //   expect(error.message).to.contain(`model directory ${fullBogusModelDir} not found`)
   // })
+  // .it('requires proper args')
+
+  test
+  .stdout()
+  .command(['pounce', bogusModelDir, '-t', 'nonexistentTemplateDir'])
+  .it('runs pounce with all args and flags', ctx => {
+    expect(ctx.stdout).to.contain(`model directory ${fullBogusModelDir} not found`)
+  })
 })
 /* ns__custom_end tests */

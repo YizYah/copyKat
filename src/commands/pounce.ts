@@ -53,12 +53,13 @@ async run() {
 
   const {templateDir} = flags
   /* ns__custom_start run */
-  let finalTemplateDir: string
+  let finalTemplateDir = ''
   try {
     finalTemplateDir = await createNewTemplate(resolveDir(model), resolveDir(templateDir))
     this.log(printInstructionsForNewTemplate(finalTemplateDir))
   } catch (error) {
-    this.log(error)
+    this.log(dingKats.ERROR + ` cannot create template: ${error}`)
+    return
   }
 
   const code = finalTemplateDir + suffixes.SAMPLE_DIR
@@ -69,8 +70,7 @@ async run() {
       finalTemplateDir, code, newModel
     )
   } catch (error) {
-    this.log(error)
-    this.error(dingKats.ERROR + ` cannot compare directories: ${error}`)
+    this.log(dingKats.ERROR + ` cannot compare directories: ${error}`)
   }
 
   /* ns__custom_end run */
