@@ -8,11 +8,15 @@
 [//]: # ( ns__start_section intro )
 
 [//]: # ( ns__custom_start description )
-Build a generator based on a model code base
+
+![logo](src/custom/images/copykat-logo.jpg)
+
+Build a generator that uses [geenee](https://www.npmjs.com/package/geenee) based on a model code base.  
 
 [//]: # ( ns__custom_end description )
 
 [//]: # ( ns__custom_start afterDescription )
+
 ![happy cat](src/custom/images/COPYKAT-GIF3.gif)
 
 [//]: # ( ns__custom_end afterDescription )
@@ -33,7 +37,7 @@ Build a generator based on a model code base
 [//]: # ( ns__custom_start beforeToc )
 To create your own generator, make a local copy of a code base that you like and then call `copykat pounce $MODEL` and follow the directions.
 
-The generators use [ns-flip](https://www.npmjs.com/package/ns-flip), a re-generator tool.  That means that you can release your generator and then make changes as needed.  Whenever you update it,
+The generators use [geenee](https://www.npmjs.com/package/geenee), a re-generator tool.  That means that you can release your generator and then make changes as needed.  Whenever you update it,
 your users can apply them without losing their custom changes.  See more complete instructions below in [Usage](#usage).
 
 For an example, see [easy-oclif-cli](https://www.npmjs.com/package/easy-oclif-cli).
@@ -50,7 +54,8 @@ For an example, see [easy-oclif-cli](https://www.npmjs.com/package/easy-oclif-cl
 
 [//]: # ( ns__custom_start usage )
 # Usage
-## (1) Create a Template
+## (1) Create a Template with pounce
+![pounce image](src/custom/images/ck-pounce.jpg)
 To create the template, define:
 1. **MODEL_DIR** a directory for the code that will be the basis for your generator
 2. **TEMPLATE_DIR** the directory for your template
@@ -61,7 +66,8 @@ copycat pounce $MODEL_DIR -t $TEMPLATE_DIR
 ```
 and follow the directions.
 
-(2) Hone the results
+(2) Hone the results with chase
+![chaser](src/custom/images/ck-chase.jpg)
 ```
 copycat chase $TEMPLATE_DIR
 ```
