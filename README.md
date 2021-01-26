@@ -46,14 +46,14 @@ For an example, see [easy-oclif-cli](https://www.npmjs.com/package/easy-oclif-cl
 
 [//]: # ( ns__custom_start toc )
 <!-- toc -->
-* [Usage](#usage)
-* [Commands](#commands)
+* [:smiley_cat: Usage](#usage)
+* [:smile_cat: Commands](#commands)
 <!-- tocstop -->
 
 [//]: # ( ns__custom_end toc )
 
 [//]: # ( ns__custom_start usage )
-# Usage
+# :smiley_cat: Usage
 ## (1) Create a Template with pounce
 ![pounce image](src/custom/images/ck-pounce.jpg)
 To create the template, define:
@@ -93,7 +93,7 @@ USAGE
 
 
 [//]: # ( ns__start_section commandsSection )
-# Commands
+# :smile_cat: Commands
 
 
 [//]: # ( ns__custom_start commands )
