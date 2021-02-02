@@ -25,7 +25,7 @@ describe('chase command', () => {
   .command(['chase', fullBogusTemplateDir])
   .catch(error => {
     expect(error.message).to.contain(`template directory ${fullBogusTemplateDir} not found`)
-  })
+  }).timeout(10000)
   .it('requires proper args')
 
   // test
