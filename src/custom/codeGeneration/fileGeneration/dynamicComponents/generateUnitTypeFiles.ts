@@ -33,6 +33,8 @@ export async function generateUnitTypeFiles(
       sourceInfo.selectedTree[root] = highestLevelList
       selectionRoot = root
     }
+    // TODO: find the perceived need for this step
+    // @ts-ignore
     delete selectedTree[highestLevel]
 
     // console.log(`source ${source} sourceInfo.unitType=${sourceInfo.unitType}`)
