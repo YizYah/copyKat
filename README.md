@@ -46,8 +46,8 @@ For an example, see [easy-oclif-cli](https://www.npmjs.com/package/easy-oclif-cl
 
 [//]: # ( ns__custom_start toc )
 <!-- toc -->
-* [:wrench: Usage](#usage)
-* [:zap: Commands](#commands)
+* [:wrench: Usage](#wrench-usage)
+* [:zap: Commands](#zap-commands)
 <!-- tocstop -->
 
 [//]: # ( ns__custom_end toc )
