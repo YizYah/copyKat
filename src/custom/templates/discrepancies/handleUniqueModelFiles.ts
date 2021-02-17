@@ -143,6 +143,10 @@ async function handleAddingFile(
   console.log(progress(`added ${fileName} to the template as a ${fileClassification} file type...`))
 }
 
+async function isDirectory(fileName: string, modelDir: string) {
+  return fs.lstatSync(`${modelDir}/${fileName}`).isDirectory()
+}
+
 export async function handleUniqueModelFiles(
   res: Result,
   templateDir: string,
@@ -157,7 +161,9 @@ export async function handleUniqueModelFiles(
     return file.relativePath.substring(1) + '/' + file.name2
   })
 
-  if (nonGeneratedFiles.length === 0) {
+  const nonGeneratedFilesNotIgnored = nonGeneratedFiles.filter(filename =>
+    !isDirectory(stripLeadingForwardSlash(filename), modelDir))
+  if (nonGeneratedFilesNotIgnored.length === 0) {
     return generationRequired
   }
 
@@ -169,8 +175,7 @@ export async function handleUniqueModelFiles(
   for (i = 0; i < nonGeneratedFiles.length; i++) {
     const newFileName = nonGeneratedFiles[i]
     const finalFileName = stripLeadingForwardSlash(newFileName)
-    const isDirectory = await fs.lstatSync(`${modelDir}/${finalFileName}`).isDirectory()
-    if (isDirectory) continue // for now, we are just ignoring them and looking at their contents
+    if (await isDirectory(finalFileName, modelDir)) continue // for now, we are just ignoring them and looking at their contents
     const answers = await inquirer.prompt(getOldFileQuestions(newFileName))
     const {newFileTreatment} = answers
     if (newFileTreatment === oldFileOptions.ADD) {

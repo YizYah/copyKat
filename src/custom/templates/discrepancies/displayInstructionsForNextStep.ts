@@ -11,11 +11,11 @@ export function displayInstructionsForNextStep(templateDir: string, generationRe
   if (generationRequired === GenerationRequired.Template) command += ' --noSetup'
 
   // eslint-disable-next-line no-console
-  console.log(`${dingKats.GO_TO} You should now regenerate the sample code using ns-flip.
-  If you have ns-flip installed globally [you can do so by running 'npm i -g ns-flip'], then you can run
+  console.log(`${dingKats.GO_TO} You should now regenerate the sample code using geenee.
+  If you have geenee installed globally [you can do so by running 'npm i -g geenee'], then you can run
       ${generalOption('ns ' +  command)}
   Otherwise, run:
-      ${generalOption('npx ns-flip ' +  command)}
+      ${generalOption('npx geenee ' +  command)}
 
   After you have generated, run
       ${generalOption('copykat chase ' + templateDir)}
