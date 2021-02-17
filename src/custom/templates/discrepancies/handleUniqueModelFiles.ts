@@ -144,7 +144,7 @@ async function handleAddingFile(
 }
 
 async function isDirectory(fileName: string, modelDir: string) {
-  return await fs.lstatSync(`${modelDir}/${fileName}`).isDirectory()
+  return fs.lstatSync(`${modelDir}/${fileName}`).isDirectory()
 }
 
 export async function handleUniqueModelFiles(
@@ -167,7 +167,6 @@ export async function handleUniqueModelFiles(
     return generationRequired
   }
 
-  console.log(`nonGeneratedFiles=${JSON.stringify(nonGeneratedFiles)}`)
   // eslint-disable-next-line no-console
   console.log(dingKats.POUTING + ' Some files in the model code base are ' + attention(' not being generated:'))
   // eslint-disable-next-line no-console
