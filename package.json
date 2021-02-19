@@ -36,7 +36,7 @@
     "just-handlebars-helpers": "^1.0.18",
     "lister": "^1.0.3",
     "listr": "^0.14.3",
-    "magicalstrings": "0.0.10",
+    "magicalstrings": "0.0.14",
     "minimatch": "^3.0.4",
     "moment": "^2.22.0",
     "node-emoji": "^1.10.0",
