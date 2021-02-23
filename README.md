@@ -52,6 +52,9 @@ For an example, see [easy-oclif-cli](https://www.npmjs.com/package/easy-oclif-cl
 * [:wrench: Usage](#wrench-usage)
 * [:zap: Commands](#zap-commands)
 <!-- tocstop -->
+* [:wrench: Usage](#wrench-usage)
+* [:zap: Commands](#zap-commands)
+<!-- tocstop -->
 
 [//]: # ( ns__custom_end toc )
 
@@ -77,6 +80,18 @@ copycat chase $TEMPLATE_DIR
 You will be directed through the process.
 
 <!-- usage -->
+```sh-session
+$ npm install -g copykat
+$ copykat COMMAND
+running command...
+$ copykat (-v|--version|version)
+copykat/0.1.5 win32-x64 node-v14.15.5
+$ copykat --help [COMMAND]
+USAGE
+  $ copykat COMMAND
+...
+```
+<!-- usagestop -->
 ```sh-session
 $ npm install -g copykat
 $ copykat COMMAND
@@ -113,6 +128,68 @@ USAGE
 
 [//]: # ( ns__custom_start commands )
 <!-- commands -->
+* [`copykat chase TEMPLATEDIR`](#copykat-chase-templatedir)
+* [`copykat help [COMMAND]`](#copykat-help-command)
+* [`copykat pounce MODEL`](#copykat-pounce-model)
+
+## `copykat chase TEMPLATEDIR`
+
+compare generated code to your model, changing both until you've replicated the model with your template
+
+```
+USAGE
+  $ copykat chase TEMPLATEDIR
+
+ARGUMENTS
+  TEMPLATEDIR  the path to your template
+
+OPTIONS
+  -h, --help  show CLI help
+
+EXAMPLE
+  $ copykat chase sampleTemplateDir
+```
+
+_See code: [src/commands/chase.ts](https://github.com/YizYah/copykat/blob/v0.1.5/src/commands/chase.ts)_
+
+## `copykat help [COMMAND]`
+
+display help for copykat
+
+```
+USAGE
+  $ copykat help [COMMAND]
+
+ARGUMENTS
+  COMMAND  command to show help for
+
+OPTIONS
+  --all  see all commands in CLI
+```
+
+_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.2.1/src/commands/help.ts)_
+
+## `copykat pounce MODEL`
+
+specify a model code base and generate a template to build it
+
+```
+USAGE
+  $ copykat pounce MODEL
+
+ARGUMENTS
+  MODEL  path to a model code base from which you will generate your template
+
+OPTIONS
+  -h, --help                     show CLI help
+  -t, --templateDir=templateDir  path to the generator that you will build
+
+EXAMPLE
+  $ copykat pounce sampleModel -t sampleTemplateDir
+```
+
+_See code: [src/commands/pounce.ts](https://github.com/YizYah/copykat/blob/v0.1.5/src/commands/pounce.ts)_
+<!-- commandsstop -->
 * [`copykat chase TEMPLATEDIR`](#copykat-chase-templatedir)
 * [`copykat help [COMMAND]`](#copykat-help-command)
 * [`copykat pounce MODEL`](#copykat-pounce-model)
