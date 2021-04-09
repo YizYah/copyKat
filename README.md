@@ -55,7 +55,7 @@ For an example, see [easy-oclif-cli](https://www.npmjs.com/package/easy-oclif-cl
 [//]: # ( ns__custom_start usage )
 # :wrench: Usage
 ## (1) Create a Template with pounce
-![pounce image](src/custom/images/copykat-pounce-new.jpg)
+![pounce image](src/custom/images/copykat-pounce-new.png)
 To create the template, define:
 1. **MODEL_DIR** a directory for the code that will be the basis for your generator
 2. **TEMPLATE_DIR** the directory for your template
@@ -67,7 +67,7 @@ copycat pounce $MODEL_DIR -t $TEMPLATE_DIR
 and follow the directions.
 
 (2) Hone the results with chase
-![chaser](src/custom/images/ck-chase.jpg)
+![chase image](src/custom/images/copykat-chase-new.png)
 ```
 copycat chase $TEMPLATE_DIR
 ```
